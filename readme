@@ -1,4 +1,7 @@
-git add commit pull push init clone 
-git commit -m "a message"
-git push origin master
+echo "# newrepo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/eliotta/newrepo.git
+git push -u origin master
 

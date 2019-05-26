@@ -1,0 +1,10 @@
+Overview of what needs to be running in the project. 
+
+create a separate package for what was already done, and a package for new stuff. 
+
+What is the overview? 
+build the 52 object input. 
+build the five tables. 
+buid the five patterns. 
+build the clock. 
+build the five character array used to create the first row of the clock. 

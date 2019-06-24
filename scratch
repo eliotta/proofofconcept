@@ -11,3 +11,21 @@ build the five tables.
 buid the five patterns. 
 build the clock. 
 build the five character array used to create the first row of the clock. 
+
+
+
+
+ clockarray toprow = new clockarray();
+        clockarrayclass[][] trow = new clockarrayclass[1][5]; 
+        trow =  toprow.initclockarray(1,5);
+        
+        //-copy pulls into top row array. 
+        //-fill in location an other pieces of top row array. 
+        //-fill in each column, based on the top row, which is the top of each column
+        //-the positions of the clock objects in the clockarray don't change,
+        //-what the clockobjects in the clockarray represents is what changes. 
+        //-A function decides which clock object is to be populated. 
+        //-the new clock cell is populated with the new values
+        //-There are five possible pulls. A function chooses which of the five it will be, for each new clock object
+        
+        

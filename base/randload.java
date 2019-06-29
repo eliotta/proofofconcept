@@ -46,7 +46,7 @@ public class randload {
         for(int ig = 0; ig <= 52; ig++ )
         {
               bc      = arrli.get(ig);
-            System.out.println("this is bc " + bc + "   "  +  ig);
+//            System.out.println("this is bc " + bc + "   "  +  ig);
         }
 
 

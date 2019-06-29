@@ -20,7 +20,7 @@ public class clocklocation {
         cObj.avalue = " ";
         cObj.xpos = 0;
 
-        System.out.println("this is constructor for clock");
+//        System.out.println("this is constructor for clock");
     }
 
 
@@ -28,7 +28,7 @@ public class clocklocation {
     {
 
 
-        System.out.println(" a return is here ");
+//        System.out.println(" a return is here ");
 
 
 

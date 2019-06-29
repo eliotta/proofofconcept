@@ -1,0 +1,12 @@
+
+
+clearing a terminal is accomplished with the command clear. 
+
+
+A simple java application is a class with the same name as the file, in caps. 
+With a methed public static void main(){ }
+compiled with java Name.java.   Then run with java Name. 
+
+
+
+

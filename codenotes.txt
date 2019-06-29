@@ -1,0 +1,84 @@
+
+
+/* 3 2 4
+Load all the objects
+
+Create a random string of numbers, from 1 to 52
+The random string of numbers will be used to  pull objects, randomely. 
+
+
+
+The five tables have to be built. Table 3, holds the raw data. Table 4 holds 
+descriptions of the raw objects in Table 3.  When data is pulled, it goes from Table 3 to Table 1, which stores 
+data to be processed. The objects in Table 1 have to be filtered for suitability. Once they are filtered, for example, 
+Jokers might have to be screened out, the objects are placed into table 2. Table 5 Table 5.5 Table 6
+
+A function for building a way to pull from table 3 to table 1. 
+A function for pulling processing and filtering files in table 1, and depositing them in table 2.
+A clock function, for taking a group of pulls and putting them in every order possible. 
+
+Table 5.5 takes the objects housed by table 2 and puts them in every order possible via a clock function. 
+How are random pulls handled. Its positional. Its done in 5.5. It is accomplished
+using a clock. The clock has 3 rings, and is five items deep.  If 1 2 3 come up. That represents
+the first, second and third position of a particular order of cards. It means that 1 2 2 isnt necessary, 
+and neither is 3 2 1. 
+
+The plan is two different sorts. One sort are the 3 rings sorted vertically 
+with 1 2 3   1 2 4   1 2 5, etc. vat the top. But also, each row is sorted. 
+so 1 3 2 and 1 2 3 and 2 1 3 are duplicates.  The dupes are eliminated. 
+
+How are the three rings applied? Answer. The clock is filled out. One pull set, every 
+possible order.  
+
+
+6/07/19
+baseline is a score number where more likely above than below.  
+more likely is defined as gt 50%
+in the quick/cheap version, baseline is defined at pulled random objects, with 
+several attempts to match the best pattern.  In this case, there is an extra attempt 
+at matching. 
+There are two different probabilities. One is, if the pattern is met, the odds of success. 
+The other is meeting the pattern in the first place. 
+This is true for Xtra, Less, Impossible, and Baseline. 
+While base prob is defined as a number at just over 50. 
+Xtra is anything from just over 50 to a score where it makes no sense to go higher. 
+Less is the other way, until its impossible to get 
+And finally, at the lowest end, where success is impossible. 
+Other tha baseline, the other values are never set. They are just ranges. 
+The idea is experiment with different combinations of baseline xtra less and impossible. 
+Breaking the values down. 
+Impossible is a single number like baseline. 
+Baseline is one number and not a range. 
+range of possibilities for reaching base is expressed as a range for a given set 
+of user pulls, is, in fact, a range. 
+a function takes the pull set,  the single baseline, takes the possibilities of reaching that baseline 
+with the pull set in some increment, and outputs an array of numbers which are various possibilities,
+and the one baseline. Impossible functions the same way.  The two element output here and elsewhere, 
+will act as potential rules. 
+Other functions take Less, Xtra
+They work the way the baseline function works, only with the several possibilities of Less or Xtra, 
+along with the  ranges of possibilities. Like with baseline and Impossible, 
+They too put out a two dimensional range of values. One element for the score value, and one element
+for the possibility. 
+After all the values are created, they are combined.  At this point, they may well be overlap. 
+So Duplicates are eliminated.  One large array is created.  
+This one large array is a driver.  The value for one of the 4 items is presented, along with 
+its possible value of attainment. The other 3 values are combined in all their possible 
+combinations.  Each  of the various 4 values and each of their possibilities is presented. 
+Each value within the non user side will have its own percentage. The range is the value/percentage 
+combination.  
+Everything is output to an even bigger array. Again, everything is vertically and horizontally sorted, 
+and duplicates are eliminated. 
+On the user side there are several patterns possibly, with several choices for elimination. 
+Each row in the large array are used as a rule.  
+Each rule is applied against the set of objects. 
+The question is which pattern gets used. 
+The answer depends on the motivation of the user. 
+If losing is not important, but winning is life changing, than the user might take more chances. 
+In this case, outside of losing, there is no downside. The amount of money is constant. The only thing 
+here important is winning or losing. Since there are two sets of probabilities, all the combos
+have to be tried. There is no easy answer to how much of a chance to take to get over some 
+indeterminate score. 
+6/7/19 end
+
+*/

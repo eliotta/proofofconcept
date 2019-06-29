@@ -184,15 +184,21 @@ public class buildpopulateclockarray
 
             //random value pulled from random number array
             int pulled_rand_value = arli.get(i);
-            System.out.println("after get " + "what is i " + i);
+            System.out.println("after get " + "in create a pull, what is i " + i);
 
 
-            System.out.println("pulled_rand_value " + pulled_rand_value);
+            System.out.println("should be random pulled_rand_value " + pulled_rand_value);
             //single table 3 object
-            System.out.println("pulled_rand_value " + "this is test rand value of 50");
+  //          System.out.println("pulled_rand_value " + "this is test rand value of 50");
   //          randobj = lpullbynum.t3r(51);
+          
+          
+          
+          
+          if(pulled_rand_value < 51)
+          {
            randobj = lpullbynum.t3r(pulled_rand_value);
-            System.out.println("randobj");
+  //          System.out.println("randobj");
 
             //convert i to a string
             contostring = Integer.toString(ii);
@@ -202,6 +208,11 @@ public class buildpopulateclockarray
             //String contostring = Integer.toString(ig);
             retrndpull.puttable3map(contostring, randobj);
             System.out.println("after retrndpull");
+          } else
+          {
+            System.out.println("not less than 51");
+          }
+            
         }
         return retrndpull;
     }

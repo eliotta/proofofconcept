@@ -27,18 +27,18 @@ public class table3list {
     public void settable3map(Integer iintKey, table3obj tt3)
     {
         ii++;
-        System.out.println("what is get ii " +  ii);
-        System.out.println("what is get iintkey " +  iintKey);
+//        System.out.println("what is get ii " +  ii);
+//        System.out.println("what is get iintkey " +  iintKey);
         t3list.set(iintKey, tt3);
     }
 
 
     public table3obj t3r(Integer intKey)
     {
-        System.out.println("whatt is get intkey " + intKey);
+//        System.out.println("whatt is get intkey " + intKey);
         return  t3list.get(intKey);
     }
-
+ 
 
     public Integer listsize ()
     {

@@ -24,7 +24,7 @@ public class loader
 
         table3obj nullzero = new table3obj();
         table3obj nullone = new table3obj();
-        table3obj nullfifty = new table3obj();
+        
         table3obj atwo = new table3obj();
         table3obj athree = new table3obj();
         table3obj afour = new table3obj();
@@ -77,6 +77,8 @@ public class loader
         table3obj dqueen = new table3obj();
         table3obj dking = new table3obj();
         table3obj dace = new table3obj();
+      
+        table3obj nullfifty = new table3obj();
         //there were 51 new objects above.
 
 
@@ -456,7 +458,7 @@ public class loader
         for (table3obj value : task.values())
         {
             String ab = value.id;
-            System.out.println(" in loader puttable   " + iii +  " " +  ab);
+//            System.out.println(" in loader puttable   " + iii +  " " +  ab);
             cardlist.puttable3map(iii, value);
             iii++;
         }
@@ -465,7 +467,7 @@ public class loader
         for (table3obj value : task.values())
         {
             iiii = value.gettheid(value.id);
-            System.out.println(" in loader iiii before settable  " + iiii);
+ //           System.out.println(" in loader iiii before settable  " + iiii);
 
             if(iiii <= 50)
                 cardlist.settable3map(iiii, value);

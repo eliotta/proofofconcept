@@ -12,13 +12,13 @@ public class clockvalue {
 
     public clockvalue()
     {
-        System.out.println("this is constructor for clock value");
+//        System.out.println("this is constructor for clock value");
     }
 
 
     public char clockvalue()
     {
-        System.out.println(" a return is here ");
+//        System.out.println(" a return is here ");
         return '5';
     }
 

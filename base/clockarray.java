@@ -9,17 +9,14 @@
 *
 * */
 
-
 public class clockarray
 {
     clockarrayclass singleclass;
     int x;
     int y;
 
-
     public clockarray()
     {
-
     }
 
     public clockarrayclass[][] initclockarray(int X, int Y)
@@ -35,41 +32,22 @@ public class clockarray
                 cvalue[j][i] = new clockvalue();
                 cvalue[j][i].clover = "here";
                 clocation[j][i] = new clocklocation();
-                System.out.println(" firemarshall bill  ");
-
+       //         System.out.println(" firemarshall bill ");
                 carrayclass[j][i] = new clockarrayclass();
                 carrayclass[j][i].cloc = clocation[j][i];
                 carrayclass[j][i].cval = cvalue[j][i];
             }
         }
-
-
-        x = X;
-        y = Y;
-
-
-
-        singleclass = new clockarrayclass();
-       singleclass = carrayclass[2][2];
-
         return carrayclass;
     }
 
-
     public clockarrayclass getcarray(clockarrayclass[][] incarray, int a, int b)
     {
-
+        clockvalue cacval = new clockvalue();
         singleclass = incarray[a][b];
-
+        cacval = singleclass.getCval();
+        String ab = cacval.getClover();
+        System.out.println(" ab " + ab);        
         return singleclass;
     }
-
-
-    public clockarrayclass getSingleclass()
-    {
-        return singleclass;
-    }
-
-
-
 }

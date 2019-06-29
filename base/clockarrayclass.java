@@ -12,22 +12,12 @@
 * */
 
 public class clockarrayclass {
-
-
-
     clocklocation cloc = new clocklocation();
-
-
-
     clockvalue cval = new clockvalue();
-
 
     public clockarrayclass()
     {
-
     }
-
-
 
     public clocklocation getCloc()
     {
@@ -54,7 +44,4 @@ public class clockarrayclass {
         String H = cval.clover;
         return  H;
     }
-
-
-
 }

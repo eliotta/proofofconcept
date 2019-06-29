@@ -26,7 +26,7 @@ public class Start
     { 
         System.out.println("Hello World");
 //        System.out.println(" The following takes a group of numbers, here from 1 to 52, and randomizes them, ");
-//        System.out.println(" spitting them out into an array ");
+//        System.out.println(" spitting them out into an array ");   . . . 
       
       
         ArrayList<Integer> arrlio = new ArrayList<Integer>(50);

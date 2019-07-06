@@ -29,17 +29,19 @@ public class clockarray
         {
             for (int j = 0; j < Y; j++)
             {
-                cvalue[j][i] = new clockvalue();
-                cvalue[j][i].clover = "here";
-                clocation[j][i] = new clocklocation();
-       //         System.out.println(" firemarshall bill ");
-                carrayclass[j][i] = new clockarrayclass();
-                carrayclass[j][i].cloc = clocation[j][i];
-                carrayclass[j][i].cval = cvalue[j][i];
+                cvalue[i][j] = new clockvalue();
+                cvalue[i][j].clover = "here";
+                clocation[i][j] = new clocklocation();
+                System.out.println("i + j " + i + " " + j);
+                carrayclass[i][j] = new clockarrayclass();
+                carrayclass[i][j].cloc = clocation[i][j];
+                carrayclass[i][j].cval = cvalue[i][j];
             }
         }
         return carrayclass;
     }
+
+
 
     public clockarrayclass getcarray(clockarrayclass[][] incarray, int a, int b)
     {
@@ -47,7 +49,10 @@ public class clockarray
         singleclass = incarray[a][b];
         cacval = singleclass.getCval();
         String ab = cacval.getClover();
-        System.out.println(" ab " + ab);        
+        System.out.println(" ab " + ab);
         return singleclass;
     }
+
+
+
 }

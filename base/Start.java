@@ -73,27 +73,34 @@ public class Start
         //-set up top row array.
         clockarray toprow = new clockarray();
         clockarrayclass[][] trow = new clockarrayclass[0][4];
-        trow =  toprow.initclockarray(1,5);
+
+
+
+        int tsize = trow[0].length;
+
 
 
         //-copy pulls into top row array.
+        clockarrayclass[][] tcac = new clockarrayclass[][];
+        clockvalue ccval = new clockvalue();
 
+        tcac = trow;
 
-
-
-
-
-      int xx = 0;
+        int xx = 0;
       for(int i = 0; i < 5; i++)
       {
-      clockarrayclass tcac = new clockarrayclass();
-      trow[xx][i].cval
 
-
+        // get string representing number from hash.
+        //set ccval,
+        //set cval in tcac equal to ccval.
+        tcac[xx][i].cval = t3ar.
 
 
 
       }
+
+
+
 
 
 

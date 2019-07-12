@@ -24,6 +24,8 @@ public class table3list {
     }
 
     int ii = 0;
+
+
     public void settable3map(Integer iintKey, table3obj tt3)
     {
         ii++;

@@ -141,7 +141,6 @@ public class buildpopulateclockarray
 
         //Load the clock objects.
 
-
         return 3;
     }
 

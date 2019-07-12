@@ -18,8 +18,7 @@ public class Start
         start();
     }
 
-    public static void start()
-    {
+    public static void start() {
         System.out.println("Hello World");
 //        System.out.println(" The following takes a group of numbers, here from 1 to 52, and randomizes them, ");
 //        System.out.println(" spitting them out into an array ");   . . .
@@ -48,9 +47,8 @@ public class Start
         String hijk = single_obj.getHashkey();
 
         System.out.println(" abc " + abc);
-        System.out.println(" defg " + defg );
-        System.out.println(" hijk " + hijk );
-
+        System.out.println(" defg " + defg);
+        System.out.println(" hijk " + hijk);
 
 
         //- create temporary one dim array for five items.
@@ -65,7 +63,7 @@ public class Start
         buildpopulateclockarray bpca = new buildpopulateclockarray();
         //table3array create_a_pull(int lstep, int lnumofpulls, table3list lpullbynum, ArrayList<Integer> arli);
 
-        t3ar = bpca.create_a_pull(0,5,t3l,arrlio);
+        t3ar = bpca.create_a_pull(0, 5, t3l, arrlio);
 
         //-set up empty clockarray
         clockarray fullclock = new clockarray();
@@ -75,13 +73,11 @@ public class Start
         clockarrayclass[][] trow = new clockarrayclass[0][4];
 
 
-
-        int tsize = trow[0].length;
-
+//        int tsize = trow[0].length;
 
 
         //-copy pulls into top row array.
-        clockarrayclass[][] tcac = new clockarrayclass[][];
+        clockarrayclass[][] tcac = new clockarrayclass[0][4];
         clockvalue ccval = new clockvalue();
 
         tcac = trow;
@@ -91,18 +87,17 @@ public class Start
       {
 
         // get string representing number from hash.
+        //  buildpop has table3 arrays and table3 pops.
+
         //set ccval,
         //set cval in tcac equal to ccval.
-        tcac[xx][i].cval = t3ar.
-
-
-
+//        tcac[xx][i].cval = t3ar.
       }
 
 
 
 
-
+    }
 
 
 
@@ -117,7 +112,7 @@ public class Start
         //-the new clock cell is populated with the new values
         //-There are five possible pulls. A function chooses which of the five it will be, for each new clock object
 
-    }
+
 
     public static void displayshuffle(ArrayList<Integer> arr)
     {

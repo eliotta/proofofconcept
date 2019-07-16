@@ -9,19 +9,55 @@
 public class clockvalue {
 
     String clover = " ";
+    String cvId = " ";
+    String cvForeignID = " ";
+    String cvDescription = " ";
+    String cvHashkey = " ";
+
 
     public clockvalue()
     {
 //        System.out.println("this is constructor for clock value");
     }
 
-
-    public char clockvalue()
+    public String getCvId()
     {
-//        System.out.println(" a return is here ");
-        return '5';
+        return cvId;
     }
 
+    public void setCvId(String cvId)
+    {
+        this.cvId = cvId;
+    }
+
+    public String getCvForeignID()
+    {
+        return cvForeignID;
+    }
+
+    public void setCvForeignID(String cvForeignID)
+    {
+        this.cvForeignID = cvForeignID;
+    }
+
+    public String getCvDescription() {
+        return cvDescription;
+    }
+
+    public void setCvDescription(String cvDescription)
+    {
+        this.cvDescription = cvDescription;
+    }
+
+    public String getCvHashkey()
+    {
+        return cvHashkey;
+    }
+
+    public void setCvHashkey(String cvHashkey)
+    {
+        this.cvHashkey = cvHashkey;
+    }
 
     public String getClover()
     {

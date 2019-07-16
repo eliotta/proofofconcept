@@ -22,19 +22,23 @@ public class clocklocation {
     }
 
 
-    public pos getcPos() {
+    public pos getcPos()
+    {
         return cPos;
     }
 
-    public void setcPos(pos cPos) {
+    public void setcPos(pos cPos)
+    {
         this.cPos = cPos;
     }
 
-    public value getcObj() {
+    public value getcObj()
+    {
         return cObj;
     }
 
-    public void setcObj(value cObj) {
+    public void setcObj(value cObj)
+    {
         this.cObj = cObj;
     }
 
@@ -47,12 +51,7 @@ public class clocklocation {
 
     public int areturn()
     {
-
-
 //        System.out.println(" a return is here ");
-
-
-
         return 5;
     }
 

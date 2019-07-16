@@ -190,11 +190,11 @@ public class buildpopulateclockarray
             //single table 3 object
   //          System.out.println("pulled_rand_value " + "this is test rand value of 50");
   //          randobj = lpullbynum.t3r(51);
-          
-          
-          
-          
-          if(pulled_rand_value < 51)
+
+
+
+
+            if(pulled_rand_value < 51)
           {
            randobj = lpullbynum.t3r(pulled_rand_value);
   //          System.out.println("randobj");

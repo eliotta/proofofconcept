@@ -38,6 +38,23 @@ public class Start
         table3array single_pull = new table3array();
         int randobj = arrlio.get(0);
 
+
+        int getarandom = 0;
+        table3list tempbynum = ldr.gettablelist();
+        table3obj temp_obj = new table3obj();
+        for(int b = 0; b < 4; b++)
+        {
+            getarandom = arrlio.get(b);
+            System.out.println("this is arrllio  " + getarandom);
+            temp_obj = tempbynum.t3r(getarandom);
+            String brief = temp_obj.description;
+            System.out.println(" description  " + brief);
+        }
+
+
+
+
+
         table3list pullbynum = ldr.gettablelist();
         single_obj = pullbynum.t3r(randobj);
 
@@ -98,10 +115,6 @@ public class Start
 
 
     }
-
-
-
-
 
 
         //-fill in location an other pieces of top row array.

@@ -15,6 +15,7 @@ public class clockarrayclass {
     clocklocation cloc = new clocklocation();
     clockvalue cval = new clockvalue();
 
+
     public clockarrayclass()
     {
     }
@@ -29,19 +30,23 @@ public class clockarrayclass {
         this.cloc = cloc;
     }
 
+
     public clockvalue getCval()
     {
         return cval;
     }
+
 
     public void setCval(clockvalue cval)
     {
         this.cval = cval;
     }
 
+
     public String getclover()
     {
         String H = cval.clover;
         return  H;
     }
+
 }

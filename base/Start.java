@@ -48,7 +48,7 @@ public class Start
             System.out.println("this is arrllio  " + getarandom);
             temp_obj = tempbynum.t3r(getarandom);
             String brief = temp_obj.description;
-            System.out.println(" description  " + brief);
+            System.out.println(" descriptionn  " + brief);
         }
 
 

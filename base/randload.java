@@ -65,7 +65,7 @@ public class randload {
     {
         System.out.println(" this is the clock");
         clocklocation Clock = new clocklocation();
-        int b = Clock.areturn();
+
     }
 
 

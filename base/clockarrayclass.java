@@ -25,10 +25,12 @@ public class clockarrayclass {
         return cloc;
     }
 
+
     public void setCloc(clocklocation cloc)
     {
         this.cloc = cloc;
     }
+
 
 
     public clockvalue getCval()

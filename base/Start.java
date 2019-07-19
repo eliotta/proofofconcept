@@ -94,21 +94,50 @@ public class Start
 
 
         //-copy pulls into top row array.
-        clockarrayclass[][] tcac = new clockarrayclass[0][4];
-        clockvalue ccval = new clockvalue();
 
-        tcac = trow;
 
-        int xx = 0;
-      for(int i = 0; i < 5; i++)
+
+
+
+
+         int getarrandom = 0;
+      //  table3list tempbynum = ldr.gettablelist();
+    //    table3obj temp_obj = new table3obj();
+        clockvalue temp_cval = new clockvalue();
+        clocklocation temp_pos = new clocklocation();
+        clockarray[][] t_array = new clockarray[0][4];
+        clockarrayclass t_carray = new clockarrayclass();
+
+
+      for(int b = 0; b < 5; b++)
       {
+          getarandom = arrlio.get(b);
+          System.out.println("this is arrllio  " + getarandom);
+          temp_obj = tempbynum.t3r(getarandom);
+          String brief = temp_obj.description;
+          System.out.println(" description  " + brief);
 
-        // get string representing number from hash.
-        //  buildpop has table3 arrays and table3 pops.
+          //Load information into a clockvalue.
+          String t_id = temp_obj.getId();
+          String t_foreignid = temp_obj.getForeignid();
+          String t_description = temp_obj.getDescription();
+          String t_hashkey = temp_obj.getHashkey();
 
-        //set ccval,
-        //set cval in tcac equal to ccval.
-//        tcac[xx][i].cval = t3ar.
+          temp_cval.setCvId(t_id);
+          temp_cval.setCvForeignID(t_foreignid);
+          temp_cval.setCvDescription(t_description);
+          temp_cval.setCvHashkey(t_hashkey);
+
+          //Load information into clocklocation
+          int t_xpos = 0;
+          int t_ypos = b;
+          temp_pos.setcXpos(t_xpos);
+          temp_pos.setcYpos(t_ypos);
+
+          //load clockvalue and clocklocation into clockarray class
+          t_carray.setCloc(temp_pos);
+          t_carray.setCval(temp_cval);
+
       }
 
 

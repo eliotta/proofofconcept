@@ -11,7 +11,10 @@
 
 public class clockarray
 {
+
+
     clockarrayclass singleclass;
+
     int x;
     int y;
 
@@ -53,6 +56,16 @@ public class clockarray
         return singleclass;
     }
 
+
+    public clockarrayclass getSingleclass()
+    {
+        return singleclass;
+    }
+
+    public void setSingleclass(clockarrayclass singleclass)
+    {
+        this.singleclass = singleclass;
+    }
 
 
 }

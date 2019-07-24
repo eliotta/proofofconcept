@@ -36,7 +36,7 @@ public class clockarray
             for (int j = 0; j < Y; j++)
             {
                 cvalue[i][j] = new clockvalue();
-                cvalue[i][j].clover = "here";
+ 
                 clocation[i][j] = new clocklocation();
                 System.out.println("i + j " + i + " " + j);
                 carrayclass[i][j] = new clockarrayclass();

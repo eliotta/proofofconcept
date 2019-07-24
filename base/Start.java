@@ -90,6 +90,10 @@ public class Start
 
         clockarray[][] t_array;
         t_array = new clockarray[1][4];
+          
+        clockarray fcarray = new clockarray();
+        clockarrayclass fclass[][] = new clockarrayclass[1][4];
+        fclass = fcarray.initclockarray(1, 4);
 
       for(int b = 0; b < 4; b++)
       {
@@ -124,7 +128,15 @@ public class Start
           //load clockarrayclass into clock array
           t_array[0][b] = new clockarray();
           t_array[0][b].setSingleclass(t_carray);
-
+        
+          fclass[0][b] = new clockarrayclass();
+          clockvalue cra = new clockvalue();
+          fclass[0][b].setCval(temp_cval);
+          fclass[0][b].setCloc(temp_pos);
+          cra = fclass[0][b].getCval();
+          String crastring = cra.getCvDescription();
+          System.out.println(" crastring " + crastring);
+      
       }
 
        for(int ib = 0; ib < 4; ib++){
@@ -137,8 +149,16 @@ public class Start
           clockvalue cv = new clockvalue();
           cv = cac.getCval();
           String cvs = cv.getCvDescription();
-
+           
            System.out.println(" test here " + cvs + " " + icl);
+         
+             
+           cv = fclass[0][ib].getCval();
+           
+         
+            String abcde = cv.getCvDescription();
+            System.out.println(" t h " + abcde + " " + icl);
+            
 
 
 

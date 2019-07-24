@@ -40,7 +40,8 @@ public class clockvalue {
         this.cvForeignID = cvForeignID;
     }
 
-    public String getCvDescription() {
+    public String getCvDescription()
+    {
         return cvDescription;
     }
 

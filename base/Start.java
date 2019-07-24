@@ -24,12 +24,10 @@ public class Start
 //        System.out.println(" spitting them out into an array ");   . . .
 
 
-        ArrayList<Integer> arrlio = new ArrayList<Integer>(50);
-        arrlio = numshuffle(50);
-
+        ArrayList<Integer> arrlio = new ArrayList<Integer>(51);
+        arrlio = numshuffle(51);
 
         displayshuffle(arrlio);
-
 
         loader ldr = new loader();
         ldr.creating();
@@ -51,10 +49,6 @@ public class Start
             System.out.println(" descriptionn  " + brief);
         }
 
-
-
-
-
         table3list pullbynum = ldr.gettablelist();
         single_obj = pullbynum.t3r(randobj);
 
@@ -63,9 +57,7 @@ public class Start
         String defg = single_obj.getDescription();
         String hijk = single_obj.getHashkey();
 
-        System.out.println(" abc " + abc);
-        System.out.println(" defg " + defg);
-        System.out.println(" hijk " + hijk);
+
 
 
         //- create temporary one dim array for five items.
@@ -89,33 +81,23 @@ public class Start
         clockarray toprow = new clockarray();
         clockarrayclass[][] trow = new clockarrayclass[0][4];
 
-
 //        int tsize = trow[0].length;
 
-
         //-copy pulls into top row array.
-
-
-
-
-
-
          int getarrandom = 0;
-      //  table3list tempbynum = ldr.gettablelist();
-    //    table3obj temp_obj = new table3obj();
         clockvalue temp_cval = new clockvalue();
         clocklocation temp_pos = new clocklocation();
-        clockarray[][] t_array = new clockarray[0][4];
-        clockarrayclass t_carray = new clockarrayclass();
 
+        clockarray[][] t_array;
+        t_array = new clockarray[1][4];
 
-      for(int b = 0; b < 5; b++)
+      for(int b = 0; b < 4; b++)
       {
           getarandom = arrlio.get(b);
           System.out.println("this is arrllio  " + getarandom);
           temp_obj = tempbynum.t3r(getarandom);
           String brief = temp_obj.description;
-          System.out.println(" description  " + brief);
+//          System.out.println(" description  " + brief);
 
           //Load information into a clockvalue.
           String t_id = temp_obj.getId();
@@ -130,23 +112,43 @@ public class Start
 
           //Load information into clocklocation
           int t_xpos = 0;
-          int t_ypos = b;
+          int t_ypos = 0;
           temp_pos.setcXpos(t_xpos);
           temp_pos.setcYpos(t_ypos);
 
-          //load clockvalue and clocklocation into clockarray class
+          //load clockvalue and clocklocation into clockarrayclass
+          clockarrayclass t_carray = new clockarrayclass();
           t_carray.setCloc(temp_pos);
           t_carray.setCval(temp_cval);
 
+          //load clockarrayclass into clock array
+          t_array[0][b] = new clockarray();
+          t_array[0][b].setSingleclass(t_carray);
+
       }
 
+       for(int ib = 0; ib < 4; ib++){
+          clockarrayclass cac = new clockarrayclass();
+          cac = t_array[0][ib].getSingleclass();
 
+          clocklocation cl  = new clocklocation();
+          cl= cac.getCloc();
+          int icl = cl.getcXpos();
+          clockvalue cv = new clockvalue();
+          cv = cac.getCval();
+          String cvs = cv.getCvDescription();
+
+           System.out.println(" test here " + cvs + " " + icl);
+
+
+
+       }
 
 
     }
 
 
-        //-fill in location an other pieces of top row array.
+
         //-fill in each column, based on the top row, which is the top of each column
         //-the positions of the clock objects in the clockarray don't change,
         //-what the clockobjects in the clockarray represents is what changes.

@@ -11,7 +11,8 @@
 *
 * */
 
-public class clockarrayclass {
+public class clockarrayclass
+{
     clocklocation cloc = new clocklocation();
     clockvalue cval = new clockvalue();
 

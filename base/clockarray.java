@@ -13,7 +13,10 @@ public class clockarray
 {
 
 
-    clockarrayclass singleclass;
+
+
+    clockarrayclass singleclass = new clockarrayclass();
+
 
     int x;
     int y;
@@ -46,6 +49,21 @@ public class clockarray
 
 
 
+
+    public void init(int X, int Y)
+    {
+        clockarray[][] carray = new clockarray[X][Y];
+
+        for(int i = 0; i < X; i++ )
+        {
+            for (int j = 0; j < Y; j++)
+            {
+                carray[i][j] = new clockarray();
+            }
+        }
+    }
+
+
     public clockarrayclass getcarray(clockarrayclass[][] incarray, int a, int b)
     {
         clockvalue cacval = new clockvalue();
@@ -62,10 +80,13 @@ public class clockarray
         return singleclass;
     }
 
+
     public void setSingleclass(clockarrayclass singleclass)
     {
         this.singleclass = singleclass;
     }
+
+
 
 
 }

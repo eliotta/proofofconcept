@@ -146,10 +146,26 @@ public class Start
           fclass[0][b].setCloc(temp_pos);
           cra = fclass[0][b].getCval();
           String crastring = cra.getCvDescription();
+          if(b > 2) {
+              int iac = 0;
+          }
           System.out.println(" crastring " + crastring);
       
       }
 
+        clockarrayclass cac;
+        clockvalue cv;
+        for(int ib = 0; ib < 4; ib++){
+            cac = new clockarrayclass();
+            cac = t_array[0][ib].getSingleclass();
+            cv = new clockvalue();
+            cv = cac.getCval();
+            String cvs = cv.getCvDescription();
+            System.out.println(" cvs " + cvs);
+        }
+
+
+      /*
        for(int ib = 0; ib < 4; ib++){
           clockarrayclass cac = new clockarrayclass();
           cac = t_array[0][ib].getSingleclass();
@@ -161,20 +177,24 @@ public class Start
           cv = cac.getCval();
           String cvs = cv.getCvDescription();
            
-           System.out.println(" test here " + cvs + " " + icl);
-         
-             
-           cv = fclass[0][ib].getCval();
+ //          System.out.println(" test here " + cvs + " " + icl);
+           t_carray2 = new clockarrayclass();
+           t_carray2 = t_array[0][ib].getSingleclass();
+           clockvalue cra2 = new clockvalue();
+           cra2 = t_carray2.getCval();
+           String tcarray2 = cra2.getCvDescription();
+
+           System.out.println(" t_carray2 the second " + tcarray2);
+
+
+    //       cv = fclass[0][ib].getCval();
            
          
-            String abcde = cv.getCvDescription();
-            System.out.println(" t h " + abcde + " " + icl);
-            
-
-
+    //        String abcde = cv.getCvDescription();
+   //         System.out.println(" t h " + abcde + " " + icl);
 
        }
-
+*/
 
     }
 

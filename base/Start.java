@@ -90,7 +90,10 @@ public class Start
 
         clockarray[][] t_array;
         t_array = new clockarray[1][4];
-          
+        clockarrayclass t_carray = new clockarrayclass();
+        clockarrayclass t_carray2 = new clockarrayclass();    
+      
+      
         clockarray fcarray = new clockarray();
         clockarrayclass fclass[][] = new clockarrayclass[1][4];
         fclass = fcarray.initclockarray(1, 4);
@@ -121,13 +124,21 @@ public class Start
           temp_pos.setcYpos(t_ypos);
 
           //load clockvalue and clocklocation into clockarrayclass
-          clockarrayclass t_carray = new clockarrayclass();
+          t_carray = new clockarrayclass();
+          t_carray2 = new clockarrayclass();
           t_carray.setCloc(temp_pos);
           t_carray.setCval(temp_cval);
 
           //load clockarrayclass into clock array
           t_array[0][b] = new clockarray();
           t_array[0][b].setSingleclass(t_carray);
+          t_carray2 = t_array[0][b].getSingleclass();
+          clockvalue cra2 = new clockvalue(); 
+          cra2 = t_carray2.getCval();
+          String tcarray2 = cra2.getCvDescription();
+        
+          System.out.println(" t_carray2 " + tcarray2); 
+         
         
           fclass[0][b] = new clockarrayclass();
           clockvalue cra = new clockvalue();

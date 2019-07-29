@@ -19,10 +19,8 @@ public class Start
     }
 
     public static void start() {
-        System.out.println("Hello World");
 //        System.out.println(" The following takes a group of numbers, here from 1 to 52, and randomizes them, ");
 //        System.out.println(" spitting them out into an array ");   . . .
-
 
         ArrayList<Integer> arrlio = new ArrayList<Integer>(51);
         arrlio = numshuffle(51);
@@ -36,29 +34,15 @@ public class Start
         table3array single_pull = new table3array();
         int randobj = arrlio.get(0);
 
-
         int getarandom = 0;
         table3list tempbynum = ldr.gettablelist();
         table3obj temp_obj = new table3obj();
-        for(int b = 0; b < 4; b++)
-        {
-            getarandom = arrlio.get(b);
-            System.out.println("this is arrllio  " + getarandom);
-            temp_obj = tempbynum.t3r(getarandom);
-            String brief = temp_obj.description;
-            System.out.println(" descriptionn  " + brief);
-        }
-
+      
         table3list pullbynum = ldr.gettablelist();
         single_obj = pullbynum.t3r(randobj);
-
-
         int abc = single_obj.gettheid("17");
         String defg = single_obj.getDescription();
         String hijk = single_obj.getHashkey();
-
-
-
 
         //- create temporary one dim array for five items.
         table3array retrndpull = new table3array();
@@ -80,9 +64,7 @@ public class Start
         //-set up top row array.
         clockarray toprow = new clockarray();
         clockarrayclass[][] trow = new clockarrayclass[0][4];
-
-//        int tsize = trow[0].length;
-
+      
         //-copy pulls into top row array.
          int getarrandom = 0;
         clockvalue temp_cval = new clockvalue();
@@ -93,110 +75,49 @@ public class Start
         clockarrayclass t_carray = new clockarrayclass();
         clockarrayclass t_carray2 = new clockarrayclass();    
       
-      
         clockarray fcarray = new clockarray();
         clockarrayclass fclass[][] = new clockarrayclass[1][4];
         fclass = fcarray.initclockarray(1, 4);
-
-      for(int b = 0; b < 4; b++)
-      {
-          getarandom = arrlio.get(b);
-          System.out.println("this is arrllio  " + getarandom);
-          temp_obj = tempbynum.t3r(getarandom);
-          String brief = temp_obj.description;
-//          System.out.println(" description  " + brief);
-
-          //Load information into a clockvalue.
+ 
+          //load clockvalue and clocklocation into clockarrayclass       
+       
+      Clockarry[][] cllarry = new Clockarry[1][4];
+      for(int b=0; b < 4; b++ )
+      { 
+           getarandom = arrlio.get(b);  
+           temp_obj = tempbynum.t3r(getarandom);
+  
+          //Load information 
           String t_id = temp_obj.getId();
           String t_foreignid = temp_obj.getForeignid();
           String t_description = temp_obj.getDescription();
-          String t_hashkey = temp_obj.getHashkey();
-
-          temp_cval.setCvId(t_id);
-          temp_cval.setCvForeignID(t_foreignid);
-          temp_cval.setCvDescription(t_description);
-          temp_cval.setCvHashkey(t_hashkey);
-
-          //Load information into clocklocation
+          String t_hashkey = temp_obj.getHashkey();  
           int t_xpos = 0;
           int t_ypos = 0;
-          temp_pos.setcXpos(t_xpos);
-          temp_pos.setcYpos(t_ypos);
-
-          //load clockvalue and clocklocation into clockarrayclass
-          t_carray = new clockarrayclass();
-          t_carray2 = new clockarrayclass();
-          t_carray.setCloc(temp_pos);
-          t_carray.setCval(temp_cval);
-
-          //load clockarrayclass into clock array
-          t_array[0][b] = new clockarray();
-          t_array[0][b].setSingleclass(t_carray);
-          t_carray2 = t_array[0][b].getSingleclass();
-          clockvalue cra2 = new clockvalue(); 
-          cra2 = t_carray2.getCval();
-          String tcarray2 = cra2.getCvDescription();
         
-          System.out.println(" t_carray2 " + tcarray2); 
-         
-        
-          fclass[0][b] = new clockarrayclass();
-          clockvalue cra = new clockvalue();
-          fclass[0][b].setCval(temp_cval);
-          fclass[0][b].setCloc(temp_pos);
-          cra = fclass[0][b].getCval();
-          String crastring = cra.getCvDescription();
-          if(b > 2) {
-              int iac = 0;
-          }
-          System.out.println(" crastring " + crastring);
-      
+          cllarry[0][b] = new Clockarry();
+          cllarry[0][b].setCvId(t_id);
+          cllarry[0][b].setCvForeignID(t_foreignid);
+          cllarry[0][b].setCvDescription(t_description);
+          cllarry[0][b].setCvHashkey(t_hashkey);
+          cllarry[0][b].setcXpos(t_xpos);
+          cllarry[0][b].setcYpos(t_ypos);   
       }
 
-        clockarrayclass cac;
-        clockvalue cv;
-        for(int ib = 0; ib < 4; ib++){
-            cac = new clockarrayclass();
-            cac = t_array[0][ib].getSingleclass();
-            cv = new clockvalue();
-            cv = cac.getCval();
-            String cvs = cv.getCvDescription();
-            System.out.println(" cvs " + cvs);
+
+        for(int ib = 0; ib < 4; ib++)
+        {
+            String a = cllarry[0][ib].getCvId();
+            String b = cllarry[0][ib].getCvForeignID();
+            String c = cllarry[0][ib].getCvDescription();
+            //String d = cllarry[0][ib].getCvHashkey();
+            String d = cllarry[0][ib].cvdes;
+            int e = cllarry[0][ib].getcXpos();
+            int f = cllarry[0][ib].getcYpos();
+            System.out.println(a + " " + b + " " +  c + " "  +  d + " " + e + " " + f);
         }
-
-
-      /*
-       for(int ib = 0; ib < 4; ib++){
-          clockarrayclass cac = new clockarrayclass();
-          cac = t_array[0][ib].getSingleclass();
-
-          clocklocation cl  = new clocklocation();
-          cl= cac.getCloc();
-          int icl = cl.getcXpos();
-          clockvalue cv = new clockvalue();
-          cv = cac.getCval();
-          String cvs = cv.getCvDescription();
-           
- //          System.out.println(" test here " + cvs + " " + icl);
-           t_carray2 = new clockarrayclass();
-           t_carray2 = t_array[0][ib].getSingleclass();
-           clockvalue cra2 = new clockvalue();
-           cra2 = t_carray2.getCval();
-           String tcarray2 = cra2.getCvDescription();
-
-           System.out.println(" t_carray2 the second " + tcarray2);
-
-
-    //       cv = fclass[0][ib].getCval();
-           
-         
-    //        String abcde = cv.getCvDescription();
-   //         System.out.println(" t h " + abcde + " " + icl);
-
-       }
-*/
-
     }
+  
 
 
 

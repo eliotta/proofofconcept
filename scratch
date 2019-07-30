@@ -39,7 +39,9 @@ build the five character array used to create the first row of the clock.
         - function to initialize the approx 5 x 5 objects. 
         - function that numbers the 5 x 5 objects are dealt with, one vertical row at a time, starting with the rightmost
           column.  The function counts up to five. When it gets to five. It starts overs. 
-        - function that reads the arrays horizontally.      
+        - ends up with what looks like a table of 25 values. 5 by 5. No classes, just the Y values to be 
+          filled in later. 
+        -  
           
         
         

@@ -30,7 +30,17 @@ build the five character array used to create the first row of the clock.
         
         
         
-        /*
+        /*7/30
+        notes. pull objects one thru five. 
+        Array isn't keyed. 
+        Y variable acts as an index. 
+        X variable is filled witha  zero, and the resulting object is copied to to the clock. 
+        But first, a series of functions. 
+        - function to initialize the approx 5 x 5 objects. 
+        - function that numbers the 5 x 5 objects are dealt with, one vertical row at a time, starting with the rightmost
+          column.  The function counts up to five. When it gets to five. It starts overs. 
+        - function that reads the arrays horizontally.      
+          
         
         
         

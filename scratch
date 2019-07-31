@@ -43,6 +43,14 @@ build the five character array used to create the first row of the clock.
           filled in later. 
         - From right to left. works like a clock. Function moves each number from top to bottom, until it gets to the 
           last number. 
+        - Function flags all the objects in the top row. In this case, its five opjects. When the 
+          the program circles back around to all five objects in the top row, the program is done. 
+        - Function checks for duplicates. First from right to left. All five objects are written to a 
+          separate array with a flag set to 'N' After a column is changed, all the objects in the clock
+          are checked against the array. The flags in the array are changed with each complete change of the 
+          clock. When a number is found in the top array of the clock, the array equivalent is set to 'Y'. 
+          If the array is already a 'Y', its a duplicate. 
+        - Function checks for duplicates. Second. 
           
         
         

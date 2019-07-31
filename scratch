@@ -52,6 +52,8 @@ build the five character array used to create the first row of the clock.
           If the array is already a 'Y', its a duplicate. 
         - Function checks for duplicates. Second. Each row becomes a number, which are then sorted, and
           duplicates are eliminated.  Use String_toint or hopefully some equivalent.
+        Note: This whole time, the object index numbers (the Y value) is filled out, and nothing else. Nothing else will 
+        be filled out until the horizontal array is finally written out. 
           
           
         

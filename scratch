@@ -51,7 +51,8 @@ build the five character array used to create the first row of the clock.
           clock. When a number is found in the top array of the clock, the array equivalent is set to 'Y'. 
           If the array is already a 'Y', its a duplicate. 
         - Function checks for duplicates. Second. Each row becomes a number, which are then sorted, and
-          duplicates are eliminated. 
+          duplicates are eliminated.  Use String_toint or hopefully some equivalent.
+          
           
         
         

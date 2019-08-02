@@ -9,4 +9,18 @@ compiled with java Name.java.   Then run with java Name.
 
 
 
+	                                            
+       to build and initialize a 5 x 5 array, 	                                           
+       to set a flag when the clock is created, at each of the 5 top cells.            	                                           
+       to create  a pull array, and set flags. 
+       to check the pull array for flags. 
+       to recomend moving the clock, if the pull flag is  set. 
+       to recomend processing the array, if pull flag is not set, and then setting the pull flag. 
+       to move one wheel in the array from bottom to top. 
+       to check if the array has hit the top flag. 
+       If the move has hit the top flag,  keep going to 1. Move the wheel 1 to the left over. 
+       If the move cause 1 wheel over to hit the top flag, repeat for the next wheels over.
 
+       to check all five top array cells. If all flipped. Done. 
+       to check for vertical duplicates. turn to int. sort. dup check. 
+       to pull an array if its original and non dupped, and ad it to the stack.   

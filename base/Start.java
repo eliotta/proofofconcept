@@ -37,7 +37,7 @@ public class Start
         int getarandom = 0;
         table3list tempbynum = ldr.gettablelist();
         table3obj temp_obj = new table3obj();
-      
+
         table3list pullbynum = ldr.gettablelist();
         single_obj = pullbynum.t3r(randobj);
         int abc = single_obj.gettheid("17");
@@ -64,45 +64,45 @@ public class Start
         //-set up top row array.
         clockarray toprow = new clockarray();
         clockarrayclass[][] trow = new clockarrayclass[0][4];
-      
+
         //-copy pulls into top row array.
-         int getarrandom = 0;
+        int getarrandom = 0;
         clockvalue temp_cval = new clockvalue();
         clocklocation temp_pos = new clocklocation();
 
         clockarray[][] t_array;
         t_array = new clockarray[1][4];
         clockarrayclass t_carray = new clockarrayclass();
-        clockarrayclass t_carray2 = new clockarrayclass();    
-      
+        clockarrayclass t_carray2 = new clockarrayclass();
+
         clockarray fcarray = new clockarray();
         clockarrayclass fclass[][] = new clockarrayclass[1][4];
         fclass = fcarray.initclockarray(1, 4);
- 
-          //load clockvalue and clocklocation into clockarrayclass       
-       
-      Clockarry[][] cllarry = new Clockarry[1][4];
-      for(int b=0; b < 4; b++ )
-      { 
-           getarandom = arrlio.get(b);  
-           temp_obj = tempbynum.t3r(getarandom);
-  
-          //Load information 
-          String t_id = temp_obj.getId();
-          String t_foreignid = temp_obj.getForeignid();
-          String t_description = temp_obj.getDescription();
-          String t_hashkey = temp_obj.getHashkey();  
-          int t_xpos = 0;
-          int t_ypos = 0;
-        
-          cllarry[0][b] = new Clockarry();
-          cllarry[0][b].setCvId(t_id);
-          cllarry[0][b].setCvForeignID(t_foreignid);
-          cllarry[0][b].setCvDescription(t_description);
-          cllarry[0][b].setCvHashkey(t_hashkey);
-          cllarry[0][b].setcXpos(t_xpos);
-          cllarry[0][b].setcYpos(t_ypos);   
-      }
+
+        //load clockvalue and clocklocation into clockarrayclass
+
+        Clockarry[][] cllarry = new Clockarry[1][4];
+        for(int b=0; b < 4; b++ )
+        {
+            getarandom = arrlio.get(b);
+            temp_obj = tempbynum.t3r(getarandom);
+
+            //Load information
+            String t_id = temp_obj.getId();
+            String t_foreignid = temp_obj.getForeignid();
+            String t_description = temp_obj.getDescription();
+            String t_hashkey = temp_obj.getHashkey();
+            int t_xpos = 0;
+            int t_ypos = 0;
+
+            cllarry[0][b] = new Clockarry();
+            cllarry[0][b].setCvId(t_id);
+            cllarry[0][b].setCvForeignID(t_foreignid);
+            cllarry[0][b].setCvDescription(t_description);
+            cllarry[0][b].setCvHashkey(t_hashkey);
+            cllarry[0][b].setcXpos(t_xpos);
+            cllarry[0][b].setcYpos(t_ypos);
+        }
 
 
         for(int ib = 0; ib < 4; ib++)
@@ -110,23 +110,22 @@ public class Start
             String a = cllarry[0][ib].getCvId();
             String b = cllarry[0][ib].getCvForeignID();
             String c = cllarry[0][ib].getCvDescription();
-            //String d = cllarry[0][ib].getCvHashkey();
-            String d = cllarry[0][ib].cvdes;
+            String d = cllarry[0][ib].getCvHashkey();
             int e = cllarry[0][ib].getcXpos();
             int f = cllarry[0][ib].getcYpos();
             System.out.println(a + " " + b + " " +  c + " "  +  d + " " + e + " " + f);
         }
     }
-  
 
 
 
-        //-fill in each column, based on the top row, which is the top of each column
-        //-the positions of the clock objects in the clockarray don't change,
-        //-what the clockobjects in the clockarray represents is what changes.
-        //-A function decides which clock object is to be populated.
-        //-the new clock cell is populated with the new values
-        //-There are five possible pulls. A function chooses which of the five it will be, for each new clock object
+
+    //-fill in each column, based on the top row, which is the top of each column
+    //-the positions of the clock objects in the clockarray don't change,
+    //-what the clockobjects in the clockarray represents is what changes.
+    //-A function decides which clock object is to be populated.
+    //-the new clock cell is populated with the new values
+    //-There are five possible pulls. A function chooses which of the five it will be, for each new clock object
 
 
 

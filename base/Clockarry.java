@@ -3,21 +3,22 @@ public class Clockarry  implements Clocate,Cvalue
 
     int cXpos;
     int cYpos;
+    String cvdes;
 
+    char orbitflag = 'N';
+    char dupcheck = 'N';
+    char hdupcheck = 'N';
 
     String cvId;
     String cvForeignID;
-    public   String cvdes;
-    String cvHashkey ;
+    String cvHashkey;
+
 
 
     public Clockarry()
     {
 
-
     }
-
-
 
 
     public void showlocation()
@@ -29,7 +30,6 @@ public class Clockarry  implements Clocate,Cvalue
     {
         System.out.println("this is showvalue");
     }
-
 
     public int getcXpos()
     {
@@ -66,8 +66,6 @@ public class Clockarry  implements Clocate,Cvalue
     {
         //return cvForeignID;
         return cvForeignID;
-
-
     }
 
     public void setCvForeignID(String cvForeignID)
@@ -97,6 +95,39 @@ public class Clockarry  implements Clocate,Cvalue
     {
         this.cvHashkey = cvHashkey;
     }
+
+
+    public char getOrbitflag()
+    {
+        return orbitflag;
+    }
+
+    public void setOrbitflag(char orbitflag)
+    {
+        this.orbitflag = orbitflag;
+    }
+
+    public char getDupcheck()
+    {
+        return dupcheck;
+    }
+
+    public void setDupcheck(char dupcheck)
+    {
+        this.dupcheck = dupcheck;
+    }
+
+    public char getHdupcheck()
+    {
+        return hdupcheck;
+    }
+
+    public void setHdupcheck(char hdupcheck)
+    {
+        this.hdupcheck = hdupcheck;
+    }
+
+
 
 
 }

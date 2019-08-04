@@ -1,16 +1,10 @@
 
 
-clearing a terminal is accomplished with the command clear. 
-
-
-A simple java application is a class with the same name as the file, in caps. 
-With a methed public static void main(){ }
-compiled with java Name.java.   Then run with java Name. 
 
 
 
-	                                            
-      
+
+
 	                                            
        // to build and initialize a 5 x 5 array
 	Clockarry[][] fivebyfive = new Clockarry[5][5];
@@ -98,15 +92,24 @@ compiled with java Name.java.   Then run with java Name.
 	    if(comparry == pullarry) {
 		read next clock value
 	    else
-	        add this clock value to output}
-		       	
+	        add this clock value to output}		       	
 	  } 
 
-
-
        // to recomend moving the clock, if the pull flag is  set. 
-       // to recomend processing the array, if pull flag is not set, and then setting the pull flag. 
+       // Before a clock is moved, the following have to be checked. 
+	// - globalflag, dupflag, hdupflag 
+	//before the clock can move, all three flags have to be checked. 
+	    if(orbitflag = 'N' AND dupcheck = 'N' AND hdupcheck = 'N';)
+		{
+		  ok to move clock one place
+		}
+		clockarry[] pullarry = new clockarry[5];
+		 			
+	
        // to move one wheel in the array from bottom to top. 
+	
+
+
        // to check if the array has hit the top flag. 
        If the move has hit the top flag,  keep going to 1. Move the wheel 1 to the left over. 
        If the move cause 1 wheel over to hit the top flag, repeat for the next wheels over.
@@ -117,3 +120,15 @@ compiled with java Name.java.   Then run with java Name.
 
 
    
+
+
+
+
+
+
+
+
+
+
+
+ 

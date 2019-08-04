@@ -102,6 +102,7 @@ public class Start
             cllarry[0][b].setCvHashkey(t_hashkey);
             cllarry[0][b].setcXpos(t_xpos);
             cllarry[0][b].setcYpos(t_ypos);
+            Clockarry tryset  = new Clockarry();
         }
 
 

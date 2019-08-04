@@ -107,6 +107,13 @@
 		 			
 	
        // to move one wheel in the array from bottom to top. 
+       //-vertical array.
+       //-start with the top. 
+       //-adjust everything in the vertical column relative to the top cell. 
+       //-if the cell is flaged as the top cell the program started with, the next cell is 1. 
+       //-if the cell is not the top cell, the next cell is + 1.
+       //-the vertical cells will be built first populating the y value for the five array indicators, 
+       //-than by populating the actual cell. 
 	
 
 

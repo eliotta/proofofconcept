@@ -82,6 +82,21 @@ public class Start
         //load clockvalue and clocklocation into clockarrayclass
 
         Clockarry[][] cllarry = new Clockarry[1][4];
+        Clockarry[] cldavid = new Clockarry[5]; 
+      
+       for(int i = 0; i < 5; i++)
+       {
+         cldavid[i] = new Clockarry();
+       } 
+         cldavid = bpca.init_a_single_arry(4);
+       
+       for(int i = 0; i < 4; i++)
+       {
+         int ab = cldavid[i].getcYpos();
+         System.out.println(" ssssss  " + ab);  
+       }
+       
+      
         for(int b=0; b < 4; b++ )
         {
             getarandom = arrlio.get(b);
@@ -105,7 +120,6 @@ public class Start
             Clockarry tryset  = new Clockarry();
         }
 
-
         for(int ib = 0; ib < 4; ib++)
         {
             String a = cllarry[0][ib].getCvId();
@@ -119,16 +133,12 @@ public class Start
     }
 
 
-
-
     //-fill in each column, based on the top row, which is the top of each column
     //-the positions of the clock objects in the clockarray don't change,
     //-what the clockobjects in the clockarray represents is what changes.
     //-A function decides which clock object is to be populated.
     //-the new clock cell is populated with the new values
     //-There are five possible pulls. A function chooses which of the five it will be, for each new clock object
-
-
 
     public static void displayshuffle(ArrayList<Integer> arr)
     {

@@ -42,8 +42,6 @@ import java.util.*;
 *
 * */
 
-
-
 public class buildpopulateclockarray
 {
     public buildpopulateclockarray()
@@ -52,7 +50,6 @@ public class buildpopulateclockarray
         clockarray blah = new clockarray();
         clockarrayclass[][] blahh = new clockarrayclass[5][5];
         clockarrayclass bl = new clockarrayclass();
-
 
         pos Pos = new pos();
         Pos.setXpos(5);
@@ -64,23 +61,11 @@ public class buildpopulateclockarray
         blahh = blah.initclockarray(Xx, Yy);
         bl = blah.getcarray(blahh, 2,2);
 
-
         clockarrayclass bll = new clockarrayclass();
-
         bll.cval = bl.cval;
-
-        /*
-        * To Do:  Use Pos as input instead of initclockarray.
-        *
-        *
-        * */
-
         String h = bl.getclover();
-
-        System.out.println("This should say here     " + h );
+  //      System.out.println("This should say here     " + h );
     }
-
-
 
     public int buildpopclockarray_maincall()
     {
@@ -88,7 +73,6 @@ public class buildpopulateclockarray
         //a bookmark for which of the 52 shuffled cards the program is at.  Here, it is at the first card.
         int steptrack = 0;
         int totalpulls = 5;
-
 
         // five object table array to be returned.
         table3array single_pull = new table3array();
@@ -120,9 +104,8 @@ public class buildpopulateclockarray
         arrlii = createandshuffletable3indexes(count_rows);
         System.out.println("arrlii");
 
-
         //create a single pull of 5 cards from the first five random objects from table 3.
-           single_pull = create_a_pull(steptrack, totalpulls, pullbynum, arrlii);
+        single_pull = create_a_pull(steptrack, totalpulls, pullbynum, arrlii);
         System.out.println("after create a pull");
 
         //Use the results from create_a_pull to build an array of 5 clock objects.
@@ -130,30 +113,16 @@ public class buildpopulateclockarray
 
         //number of objects in a pull
         int pullsize = single_pull.table3array_size();
-        System.out.println("after int pullsize");
-
-        //Create 5 clock objects.
-        for(int i = 0; i < pullsize; i++)
-        {
-
-        }
-
-
-        //Load the clock objects.
-
+        System.out.println("after int pullsize");   
         return 3;
     }
-
-
-
 
     //returns a shuffled array of numbers, depending on table size.
     public  ArrayList<Integer>  createandshuffletable3indexes(int table3size)
     {
         ArrayList<Integer> arrli = new ArrayList<Integer>();
         int bc = 0;
- //       for(int ig = 0; ig <= table3size; ig++ )
-
+  
         for(int ig = 0; ig < table3size; ig++ )
         {
             arrli.add(ig, ig);
@@ -162,47 +131,30 @@ public class buildpopulateclockarray
         return arrli;
     }
 
-
-
-
     //given an input, number of pulls, and a table, returns an array of pulls.
-
-
-
     public table3array create_a_pull(int lstep, int lnumofpulls, table3list lpullbynum, ArrayList<Integer> arli)
     {
         table3array retrndpull = new table3array();
         table3obj randobj;
         String contostring;
-
-
         int i = 0;
         int ii = 0;
         for(i = lstep; i < lnumofpulls; i++ ) {
 
-
             //random value pulled from random number array
             int pulled_rand_value = arli.get(i);
             System.out.println("after get " + "in create a pull, what is i " + i);
-
-
             System.out.println("should be random pulled_rand_value " + pulled_rand_value);
             //single table 3 object
   //          System.out.println("pulled_rand_value " + "this is test rand value of 50");
   //          randobj = lpullbynum.t3r(51);
 
-
-
-
-            if(pulled_rand_value < 51)
+         if(pulled_rand_value < 51)
           {
-           randobj = lpullbynum.t3r(pulled_rand_value);
-  //          System.out.println("randobj");
-
+           randobj = lpullbynum.t3r(pulled_rand_value); 
             //convert i to a string
             contostring = Integer.toString(ii);
             ii++;
-
             //add rand object to the 5 object pull
             //String contostring = Integer.toString(ig);
             retrndpull.puttable3map(contostring, randobj);
@@ -211,8 +163,38 @@ public class buildpopulateclockarray
           {
             System.out.println("not less than 51");
           }
-            
         }
         return retrndpull;
-    }
+    }//create a pull
+  
+  
+   public Clockarry[] init_a_single_arry(int dim)
+   {
+     Clockarry[] singleclockarry = new Clockarry[dim]; 
+     for(int i = 0; i < dim; i++ )
+     {
+       singleclockarry[i] = new Clockarry();
+       singleclockarry[i].setcYpos(i + 8); 
+     }
+     System.out.println("does it make it here??");
+       return singleclockarry;
+   }
+  
+    public Clockarry[][] init_a_twodim_arry(int dim1, int dim2)
+   {
+     Clockarry[][] double_clockarry = new Clockarry[dim1][dim2]; 
+     for(int i = 0; i < dim1; i++ )
+     {
+       for(int j = 0; j < dim2; j++)
+       {
+       double_clockarry[dim1][dim2] = new Clockarry();
+       double_clockarry[dim1][dim2].setcXpos(dim1);
+       double_clockarry[dim1][dim2].setcYpos(dim2);  
+       }     
+     }
+      
+       return double_clockarry;
+   }
+  
+   
 }

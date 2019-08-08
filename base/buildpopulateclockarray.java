@@ -145,9 +145,6 @@ public class buildpopulateclockarray
             int pulled_rand_value = arli.get(i);
             System.out.println("after get " + "in create a pull, what is i " + i);
             System.out.println("should be random pulled_rand_value " + pulled_rand_value);
-            //single table 3 object
-  //          System.out.println("pulled_rand_value " + "this is test rand value of 50");
-  //          randobj = lpullbynum.t3r(51);
 
          if(pulled_rand_value < 51)
           {
@@ -174,13 +171,12 @@ public class buildpopulateclockarray
      for(int i = 0; i < dim; i++ )
      {
        singleclockarry[i] = new Clockarry();
-       singleclockarry[i].setcYpos(i + 8); 
+       singleclockarry[i].setcYpos(i); 
      }
-     System.out.println("does it make it here??");
        return singleclockarry;
    }
   
-    public Clockarry[][] init_a_twodim_arry(int dim1, int dim2)
+   public Clockarry[][] init_a_twodim_arry(int dim1, int dim2)
    {
      Clockarry[][] double_clockarry = new Clockarry[dim1][dim2]; 
      for(int i = 0; i < dim1; i++ )
@@ -191,10 +187,52 @@ public class buildpopulateclockarray
        double_clockarry[dim1][dim2].setcXpos(dim1);
        double_clockarry[dim1][dim2].setcYpos(dim2);  
        }     
-     }
-      
+     }    
        return double_clockarry;
    }
   
-   
+  
+  
+   public Clockarry[] clockarry_pull(int lstep, int lnumofpulls, table3list lpullbynum, ArrayList<Integer> arli)
+    {
+        Clockarry[] clockpull = new Clockarry[lnumofpulls]; 
+        table3array retrndpull = new table3array();
+        table3obj randobj; 
+        String contostring;
+        int i = 0;
+        int ii = 0;
+        for(i = lstep; i < lnumofpulls; i++ ) {
+            //random value pulled from random number array
+            int pulled_rand_value = arli.get(i);
+            System.out.println("aftr gt " + "in crte a pll, what is i " + i);
+            System.out.println("rand pulled_rand_value " + pulled_rand_value);
+
+         if(pulled_rand_value < 51)
+          {
+           randobj = lpullbynum.t3r(pulled_rand_value); 
+            //convert i to a string
+            contostring = Integer.toString(ii);
+            ii++;
+            //add rand object to the 5 object pull
+            //String contostring = Integer.toString(ig);
+            retrndpull.puttable3map(contostring, randobj);
+            String t_id = randobj.getId();
+            String t_foreignid = randobj.getForeignid();
+            String t_description = randobj.getDescription();
+            String t_hashkey = randobj.getHashkey();
+            System.out.println("rval " + t_id  +  "." + t_foreignid + "." + t_description + " ");
+            System.out.println(" lstep " + lstep + " lnumofpulls " + lnumofpulls );
+   //         clockpull[i].setCvId(t_id);
+   //         clockpull[i].setCvForeignID(t_foreignid);
+   //         clockpull[i].setCvDescription(t_description);
+   //         clockpull[i].setCvHashkey(t_hashkey);
+   //         clockpull[i].setcXpos(0);
+   //         clockpull[i].setcYpos(i);
+          } else
+          {
+            System.out.println("not less than 51");
+          }
+        }
+     return clockpull;
+    }   
 }

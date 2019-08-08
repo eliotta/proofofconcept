@@ -90,13 +90,19 @@ public class Start
        } 
          cldavid = bpca.init_a_single_arry(4);
        
+      //create a way to compare pull to cldavid. 
+//public Clockarry[] clockarry_pull(int lstep, int lnumofpulls, table3list lpullbynum, ArrayList<Integer> arli)
+   
+         Clockarry[] charlie = new Clockarry[5]; 
+         charlie = bpca.init_a_single_arry(4);
+         charlie = bpca.clockarry_pull(0, 4, t3l, arrlio); 
+     
        for(int i = 0; i < 4; i++)
        {
          int ab = cldavid[i].getcYpos();
          System.out.println(" ssssss  " + ab);  
        }
        
-      
         for(int b=0; b < 4; b++ )
         {
             getarandom = arrlio.get(b);
@@ -147,7 +153,7 @@ public class Start
         for(int ig=0;ig<=al;ig++)
         {
             bc = arr.get(ig);
-            //         System.out.println("This is BC and ig " + bc + " " + ig );
+            //System.out.println("This is BC and ig " + bc + " " + ig );
         }
     }
 

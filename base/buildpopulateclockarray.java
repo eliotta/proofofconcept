@@ -64,7 +64,6 @@ public class buildpopulateclockarray
         clockarrayclass bll = new clockarrayclass();
         bll.cval = bl.cval;
         String h = bl.getclover();
-  //      System.out.println("This should say here     " + h );
     }
 
     public int buildpopclockarray_maincall()
@@ -143,8 +142,8 @@ public class buildpopulateclockarray
 
             //random value pulled from random number array
             int pulled_rand_value = arli.get(i);
-            System.out.println("after get " + "in create a pull, what is i " + i);
-            System.out.println("should be random pulled_rand_value " + pulled_rand_value);
+//            System.out.println("after get " + "in create a pull, what is i " + i);
+//            System.out.println("should be random pulled_rand_value " + pulled_rand_value);
 
          if(pulled_rand_value < 51)
           {
@@ -181,11 +180,11 @@ public class buildpopulateclockarray
      Clockarry[][] double_clockarry = new Clockarry[dim1][dim2]; 
      for(int i = 0; i < dim1; i++ )
      {
-       for(int j = 0; j < dim2; j++)
+       for(int j = 0;  j < dim2;  j++)
        {
-       double_clockarry[dim1][dim2] = new Clockarry();
-       double_clockarry[dim1][dim2].setcXpos(dim1);
-       double_clockarry[dim1][dim2].setcYpos(dim2);  
+       double_clockarry[i][j] = new Clockarry();
+       double_clockarry[i][j].setcXpos(i);
+       double_clockarry[i][j].setcYpos(j);  
        }     
      }    
        return double_clockarry;
@@ -201,14 +200,15 @@ public class buildpopulateclockarray
         String contostring;
         int i = 0;
         int ii = 0;
-        for(i = lstep; i < lnumofpulls; i++ ) {
+        for(i = lstep;  i  <  lnumofpulls;  i++ ) {
             //random value pulled from random number array
             int pulled_rand_value = arli.get(i);
-            System.out.println("aftr gt " + "in crte a pll, what is i " + i);
-            System.out.println("rand pulled_rand_value " + pulled_rand_value);
-
+//            System.out.println("aftr gt " + "in crte a pll, what is i " + i);
+//            System.out.println("rand pulled_rand_value " + pulled_rand_value);
+         clockpull[i] = new Clockarry(); 
          if(pulled_rand_value < 51)
           {
+           
            randobj = lpullbynum.t3r(pulled_rand_value); 
             //convert i to a string
             contostring = Integer.toString(ii);
@@ -220,14 +220,14 @@ public class buildpopulateclockarray
             String t_foreignid = randobj.getForeignid();
             String t_description = randobj.getDescription();
             String t_hashkey = randobj.getHashkey();
-            System.out.println("rval " + t_id  +  "." + t_foreignid + "." + t_description + " ");
-            System.out.println(" lstep " + lstep + " lnumofpulls " + lnumofpulls );
-   //         clockpull[i].setCvId(t_id);
-   //         clockpull[i].setCvForeignID(t_foreignid);
-   //         clockpull[i].setCvDescription(t_description);
-   //         clockpull[i].setCvHashkey(t_hashkey);
-   //         clockpull[i].setcXpos(0);
-   //         clockpull[i].setcYpos(i);
+   //         System.out.println("rval " + t_id  +  "." + t_foreignid + "." + t_description + " ");
+  //          System.out.println(" lstep " + lstep + " lnumofpulls " + lnumofpulls );
+              clockpull[i].setCvId(t_id);
+              clockpull[i].setCvForeignID(t_foreignid);
+              clockpull[i].setCvDescription(t_description);
+              clockpull[i].setCvHashkey(t_hashkey);
+               clockpull[i].setcXpos(0);
+               clockpull[i].setcYpos(i);
           } else
           {
             System.out.println("not less than 51");
@@ -235,4 +235,27 @@ public class buildpopulateclockarray
         }
      return clockpull;
     }   
+
+
+//To populate a particular row of the fivebyfive array. 
+
+public Clockarry[][] rowload(Clockarry[][] fbf, Clockarry[] pull, int xpos, int ypos, int whichrow)
+{
+  Clockarry[][] internalfbf = new Clockarry[xpos][ypos];
+    for(int x = 0; x < xpos; x++)
+    {
+      for(int y = 0; y < ypos; y++) 
+      {
+        internalfbf[x][y] = new Clockarry(); 	
+      }
+    }
+  internalfbf = fbf;
+  for(int y = 0; y < ypos; y++)
+  {
+    internalfbf[whichrow][y] = pull[y];
+  }
+return internalfbf;
+}
+
+
 }

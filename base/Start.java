@@ -19,9 +19,6 @@ public class Start
     }
 
     public static void start() {
-//        System.out.println(" The following takes a group of numbers, here from 1 to 52, and randomizes them, ");
-//        System.out.println(" spitting them out into an array ");   . . .
-
         ArrayList<Integer> arrlio = new ArrayList<Integer>(51);
         arrlio = numshuffle(51);
 
@@ -80,7 +77,6 @@ public class Start
         fclass = fcarray.initclockarray(1, 4);
 
         //load clockvalue and clocklocation into clockarrayclass
-
         Clockarry[][] cllarry = new Clockarry[1][4];
         Clockarry[] cldavid = new Clockarry[5]; 
       
@@ -88,54 +84,42 @@ public class Start
        {
          cldavid[i] = new Clockarry();
        } 
-         cldavid = bpca.init_a_single_arry(4);
+         cldavid = bpca.init_a_single_arry(5);
        
-      //create a way to compare pull to cldavid. 
-//public Clockarry[] clockarry_pull(int lstep, int lnumofpulls, table3list lpullbynum, ArrayList<Integer> arli)
-   
          Clockarry[] charlie = new Clockarry[5]; 
-         charlie = bpca.init_a_single_arry(4);
-         charlie = bpca.clockarry_pull(0, 4, t3l, arrlio); 
+         charlie = bpca.init_a_single_arry(5);
+         charlie = bpca.clockarry_pull(0, 5, t3l, arrlio); 
      
-       for(int i = 0; i < 4; i++)
-       {
+      for(int i = 0;  i < 5;  i++)
+      {
          int ab = cldavid[i].getcYpos();
          System.out.println(" ssssss  " + ab);  
        }
-       
-        for(int b=0; b < 4; b++ )
+      
+        Clockarry[][]  fivebyfive = new Clockarry[5][5];
+        fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+      
+      //load up the top array
+        fivebyfive = bpca.rowload(fivebyfive, charlie, 5, 5, 0);
+         
+        for(int i = 0; i < 5; i++)
         {
-            getarandom = arrlio.get(b);
-            temp_obj = tempbynum.t3r(getarandom);
+           String a =    fivebyfive[0][i].getCvId();
+           String b =    fivebyfive[0][i].getCvForeignID();
+           String c =    fivebyfive[0][i].getCvDescription();
+           String d =    fivebyfive[0][i].getCvHashkey();
+           int e =    fivebyfive[0][i].getcXpos();
+           int f =    fivebyfive[0][i].getcYpos();
+           System.out.println(" a " + b + " c " + c + " d " + d + " e " + e ); 
+          
+          //put the top row in a separate array. get a function to add one to each 
+          //value, then load the next row into five by five. 
+          
+          
 
-            //Load information
-            String t_id = temp_obj.getId();
-            String t_foreignid = temp_obj.getForeignid();
-            String t_description = temp_obj.getDescription();
-            String t_hashkey = temp_obj.getHashkey();
-            int t_xpos = 0;
-            int t_ypos = 0;
-
-            cllarry[0][b] = new Clockarry();
-            cllarry[0][b].setCvId(t_id);
-            cllarry[0][b].setCvForeignID(t_foreignid);
-            cllarry[0][b].setCvDescription(t_description);
-            cllarry[0][b].setCvHashkey(t_hashkey);
-            cllarry[0][b].setcXpos(t_xpos);
-            cllarry[0][b].setcYpos(t_ypos);
-            Clockarry tryset  = new Clockarry();
         }
-
-        for(int ib = 0; ib < 4; ib++)
-        {
-            String a = cllarry[0][ib].getCvId();
-            String b = cllarry[0][ib].getCvForeignID();
-            String c = cllarry[0][ib].getCvDescription();
-            String d = cllarry[0][ib].getCvHashkey();
-            int e = cllarry[0][ib].getcXpos();
-            int f = cllarry[0][ib].getcYpos();
-            System.out.println(a + " " + b + " " +  c + " "  +  d + " " + e + " " + f);
-        }
+      
+      
     }
 
 
@@ -153,7 +137,6 @@ public class Start
         for(int ig=0;ig<=al;ig++)
         {
             bc = arr.get(ig);
-            //System.out.println("This is BC and ig " + bc + " " + ig );
         }
     }
 

@@ -239,9 +239,9 @@ public class buildpopulateclockarray
 
 //To populate a particular row of the fivebyfive array. 
 
-public Clockarry[][] rowload(Clockarry[][] fbf, Clockarry[] pull, int xpos, int ypos, int whichrow)
-{
-  Clockarry[][] internalfbf = new Clockarry[xpos][ypos];
+  public Clockarry[][] rowload(Clockarry[][] fbf, Clockarry[] pull, int xpos, int ypos, int whichrow)
+  {
+   Clockarry[][] internalfbf = new Clockarry[xpos][ypos];
     for(int x = 0; x < xpos; x++)
     {
       for(int y = 0; y < ypos; y++) 
@@ -249,13 +249,36 @@ public Clockarry[][] rowload(Clockarry[][] fbf, Clockarry[] pull, int xpos, int 
         internalfbf[x][y] = new Clockarry(); 	
       }
     }
-  internalfbf = fbf;
-  for(int y = 0; y < ypos; y++)
-  {
+  
+    internalfbf = fbf;
+  
+    for(int y = 0; y < ypos; y++)
+    {
     internalfbf[whichrow][y] = pull[y];
+    }
+   return internalfbf;
   }
-return internalfbf;
-}
+
+  public Clockarry[][] nextrow(Clockarry[][] fbf, int xpos, int ypos, int whichrow)
+  {
+    Clockarry[][] internalfbf = new Clockarry[xpos][ypos];
+    for(int x = 0; x < xpos; x++)
+    {
+      for(int y = 0; y < ypos; y++) 
+      {
+        internalfbf[x][y] = new Clockarry(); 	
+      }
+    }
+  
+    internalfbf = fbf;
+  
+     
+    
+    return internalfbf;
+  }
+  
+  
+
 
 
 }

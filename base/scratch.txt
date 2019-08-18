@@ -127,6 +127,42 @@
 
 
    
+	
+
+	//815 beginning
+
+	There are two flags in a clock array cell. One is for marking when a rotor is complete. Itgets reset when rotor 
+	to the left advances by 1. 
+
+	The second flag gets set across the top array, and is checked for when all five objects are reached agains. 
+	The flags in the second array are never reset. When the array is reached, the pull is in every order possible. 
+	The function is over. 
+
+	Loop until reach all five flags in the second array. The clocking is done, beginning on the left. So all five flags 
+	do not have to be checked each and every time the clock is changed.  Just when the left most flag
+	is a five. 
+
+	The rotors move up, with the numbers increasing with each turn, like the mechanical digits of a clock. 
+
+	After each turn, clock object is checked for the first of the two flags. If the first of the two flags is not turned, 
+	that means the object was not the starting object,  and the first of several checks is passed. 
+
+	The next check is the second flag check. If the first flag wasn't turned, the second flag isn't turned either.
+	If the first flag was turned, the second flags are checked, starting with the leftmost most flag. and moving right.   
+
+	The next check is the check for internal duplicates. Across the five horizontall objects, the objects may well be 
+	repeated more than once. If this is not the case, the program moves to the next check. 
+
+	The next check is the check for external duplicates. The entire top row of objects are gathered into an array, 
+	and are written to the group of already accepted arrays. If the newly created array doesn't match any of the already 
+	accepted arrays, the program can move on to the next process.  The array becomes a hash, and thats how the numbers get checked? Maybe . . capitalCities.get("England");
+
+	// Using Arrays.toString()
+   	 public static String convertArrayToString(String[] strArray) {
+        return Arrays.toString(strArray);
+    	}
+
+
 
 
 

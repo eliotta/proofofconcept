@@ -38,7 +38,7 @@ public class clockarray
                 cvalue[i][j] = new clockvalue();
  
                 clocation[i][j] = new clocklocation();
-                System.out.println("i + j " + i + " " + j);
+   //             System.out.println("i + j " + i + " " + j);
                 carrayclass[i][j] = new clockarrayclass();
                 carrayclass[i][j].cloc = clocation[i][j];
                 carrayclass[i][j].cval = cvalue[i][j];
@@ -70,7 +70,7 @@ public class clockarray
         singleclass = incarray[a][b];
         cacval = singleclass.getCval();
         String ab = cacval.getClover();
-        System.out.println(" ab " + ab);
+//        System.out.println(" ab " + ab);
         return singleclass;
     }
 

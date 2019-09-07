@@ -46,7 +46,7 @@ public class buildpopulateclockarray
 {
     public buildpopulateclockarray()
     {
-        System.out.println("with buildpopulateclockarray cnstrutr");
+     // System.out.println("with buildpopulateclockarray cnstrutr");
         clockarray blah = new clockarray();
         clockarrayclass[][] blahh = new clockarrayclass[5][5];
         clockarrayclass bl = new clockarrayclass();
@@ -68,7 +68,7 @@ public class buildpopulateclockarray
 
     public int buildpopclockarray_maincall()
     {
-        System.out.println("within build pop clock array main call");
+//        System.out.println("within build pop clock array main call");
         //a bookmark for which of the 52 shuffled cards the program is at.  Here, it is at the first card.
         int steptrack = 0;
         int totalpulls = 5;
@@ -138,28 +138,25 @@ public class buildpopulateclockarray
         String contostring;
         int i = 0;
         int ii = 0;
-        for(i = lstep; i < lnumofpulls; i++ ) {
-
-            //random value pulled from random number array
-            int pulled_rand_value = arli.get(i);
-//            System.out.println("after get " + "in create a pull, what is i " + i);
-//            System.out.println("should be random pulled_rand_value " + pulled_rand_value);
-
-         if(pulled_rand_value < 51)
-          {
-           randobj = lpullbynum.t3r(pulled_rand_value); 
-            //convert i to a string
-            contostring = Integer.toString(ii);
-            ii++;
-            //add rand object to the 5 object pull
-            //String contostring = Integer.toString(ig);
-            retrndpull.puttable3map(contostring, randobj);
-            System.out.println("after retrndpull");
-          } else
-          {
-            System.out.println("not less than 51");
-          }
+        for(i = lstep; i < lnumofpulls; i++ ) 
+        {
+               //random value pulled from random number array
+               int pulled_rand_value = arli.get(i);
+               if(pulled_rand_value < 51)
+                {
+                 randobj = lpullbynum.t3r(pulled_rand_value); 
+                  //convert i to a string
+                  contostring = Integer.toString(ii);
+                  ii++;
+                  //add rand object to the 5 object pull
+                  //String contostring = Integer.toString(ig);
+                  retrndpull.puttable3map(contostring, randobj);
+                } else
+                {
+                  System.out.println("not less than 51");
+                }
         }
+      
         return retrndpull;
     }//create a pull
   
@@ -203,8 +200,8 @@ public class buildpopulateclockarray
         for(i = lstep;  i  <  lnumofpulls;  i++ ) {
             //random value pulled from random number array
             int pulled_rand_value = arli.get(i);
-//            System.out.println("aftr gt " + "in crte a pll, what is i " + i);
-//            System.out.println("rand pulled_rand_value " + pulled_rand_value);
+    //        System.out.println("aftr gt " + "in crte a pll, what is i " + i);
+    //        System.out.println("rand pulled_rand_value " + pulled_rand_value);
          clockpull[i] = new Clockarry(); 
          if(pulled_rand_value < 51)
           {
@@ -220,8 +217,8 @@ public class buildpopulateclockarray
             String t_foreignid = randobj.getForeignid();
             String t_description = randobj.getDescription();
             String t_hashkey = randobj.getHashkey();
-   //         System.out.println("rval " + t_id  +  "." + t_foreignid + "." + t_description + " ");
-  //          System.out.println(" lstep " + lstep + " lnumofpulls " + lnumofpulls );
+            System.out.println("rval " + t_id  +  "." + t_foreignid + "." + t_description + " ");
+            System.out.println(" lstep " + lstep + " lnumofpulls " + lnumofpulls );
               clockpull[i].setCvId(t_id);
               clockpull[i].setCvForeignID(t_foreignid);
               clockpull[i].setCvDescription(t_description);

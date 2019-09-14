@@ -41,9 +41,56 @@ public class Start2
        t3ar = bpca.create_a_pull(0, 5, t3l, arrlio);
        
        //display of the five pulled item numbers. 
-         Clockarry[] charlie = new Clockarry[5]; 
-         charlie = bpca.init_a_single_arry(5);
-         charlie = bpca.clockarry_pull(0, 5, t3l, arrlio);  
+         Clockarry[] asinglepull = new Clockarry[5]; 
+         asinglepull = bpca.init_a_single_arry(5);
+         asinglepull = bpca.clockarry_pull(0, 5, t3l, arrlio);  
+             
+         //Create initialize and populate the empty five by five clock array.  
+         Clockarry[][]  fivebyfive = new Clockarry[5][5];
+         fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+      
+         //load up the top array
+         fivebyfive = bpca.rowload(fivebyfive, asinglepull, 5, 5, 0);
+         
+       
+       //this for loop just displays whats in the top row. 
+       for(int i = 0; i < 5; i++)
+        {
+           String a =    fivebyfive[0][i].getCvId();
+           String b =    fivebyfive[0][i].getCvForeignID();
+           String c =    fivebyfive[0][i].getCvDescription();
+           String d =    fivebyfive[0][i].getCvHashkey();
+           int e =    fivebyfive[0][i].getcXpos();
+           int f =    fivebyfive[0][i].getcYpos();
+           System.out.println(" a " + b + " c " + c + " d " + d + " e " + e ); 
+        }
+      
+      
+      //fivebyfive is created at this point and initialized.
+      //top row is created using asinglepull/rowload
+      //read the top row, use a function to create the row below. 
+      //read the next row, use the next row to create the row below that. 
+      //repeat till all the rows are created. 
+      //package everthing into a load function. 
+      
+      clockarrayclass tempcac = new clockarrayclass();
+      for(int i == 1; i <= max; i++)
+      {
+        //get the object
+        //read the object number number
+        //replace the object in the cell with the new object.
+        
+        tempcac = fivebyfive[0][i];
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      }
       
       
       
@@ -51,15 +98,16 @@ public class Start2
       
       
       
-  
+     
+              
+           
+           
+           
+          
+               
       
-    }
-
-  
-  
-  
-  
-  
+      
+    }  
   
     public static void displayshuffle(ArrayList<Integer> arr)
     {

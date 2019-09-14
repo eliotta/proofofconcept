@@ -246,9 +246,7 @@ public class buildpopulateclockarray
         internalfbf[x][y] = new Clockarry(); 	
       }
     }
-  
-    internalfbf = fbf;
-  
+    internalfbf = fbf;  
     for(int y = 0; y < ypos; y++)
     {
     internalfbf[whichrow][y] = pull[y];
@@ -266,15 +264,25 @@ public class buildpopulateclockarray
         internalfbf[x][y] = new Clockarry(); 	
       }
     }
-  
-    internalfbf = fbf;
-  
-     
-    
+    internalfbf = fbf; 
     return internalfbf;
   }
   
+  /*
+  - take a row from a clockarray and create a temporary array to be processed, and 
+    used to create a next row. 
+    
+  - run the this temporary  
+    
+    
+  -   
+    
+    
+    
+    
+    
   
+  */
 
 
 

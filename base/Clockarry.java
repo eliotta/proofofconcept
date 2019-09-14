@@ -13,8 +13,6 @@ public class Clockarry  implements Clocate,Cvalue
     String cvForeignID;
     String cvHashkey;
 
-
-
     public Clockarry()
     {
 

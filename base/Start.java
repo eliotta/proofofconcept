@@ -110,7 +110,7 @@ public class Start
            String d =    fivebyfive[0][i].getCvHashkey();
            int e =    fivebyfive[0][i].getcXpos();
            int f =    fivebyfive[0][i].getcYpos();
-           System.out.println(" a " + b + " c " + c + " d " + d + " e " + e ); 
+           System.out.println(" a " + a + " b " + b + " c " + c + " d " + d + " e " + e );
           
           //put the top row in a separate array. get a function to add one to each 
           //value, then load the next row into five by five. 

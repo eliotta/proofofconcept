@@ -126,6 +126,11 @@ public class Clockarry  implements Clocate,Cvalue
     }
 
 
-
+    public int convertID(String StringID)
+    {
+        String number = "10";
+        int convertedID  = Integer.parseInt(StringID);
+        return convertedID;
+    }
 
 }

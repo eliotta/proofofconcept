@@ -197,6 +197,8 @@ public class buildpopulateclockarray
         String contostring;
         int i = 0;
         int ii = 0;
+        int idindex = 1;
+        String sidindex;
         for(i = lstep;  i  <  lnumofpulls;  i++ ) {
             //random value pulled from random number array
             int pulled_rand_value = arli.get(i);
@@ -205,7 +207,7 @@ public class buildpopulateclockarray
          clockpull[i] = new Clockarry(); 
          if(pulled_rand_value < 51)
           {
-           
+
            randobj = lpullbynum.t3r(pulled_rand_value); 
             //convert i to a string
             contostring = Integer.toString(ii);
@@ -219,12 +221,14 @@ public class buildpopulateclockarray
             String t_hashkey = randobj.getHashkey();
             System.out.println("rval " + t_id  +  "." + t_foreignid + "." + t_description + " ");
             System.out.println(" lstep " + lstep + " lnumofpulls " + lnumofpulls );
-              clockpull[i].setCvId(t_id);
+            sidindex = String.valueOf(idindex);
+              clockpull[i].setCvId(sidindex);
               clockpull[i].setCvForeignID(t_foreignid);
               clockpull[i].setCvDescription(t_description);
               clockpull[i].setCvHashkey(t_hashkey);
                clockpull[i].setcXpos(0);
                clockpull[i].setcYpos(i);
+               idindex++;
           } else
           {
             System.out.println("not less than 51");

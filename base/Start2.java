@@ -62,7 +62,7 @@ public class Start2
            String d =    fivebyfive[0][i].getCvHashkey();
            int e =    fivebyfive[0][i].getcXpos();
            int f =    fivebyfive[0][i].getcYpos();
-           System.out.println(" a " + b + " c " + c + " d " + d + " e " + e ); 
+           System.out.println(" a " + a + " b " + b + " c " + c + " d " + d + " e " + e );
         }
       
       
@@ -72,9 +72,36 @@ public class Start2
       //read the next row, use the next row to create the row below that. 
       //repeat till all the rows are created. 
       //package everthing into a load function. 
-      
-      clockarrayclass tempcac = new clockarrayclass();
-      for(int i == 1; i <= max; i++)
+
+
+
+
+
+      int max = 5;
+      Clockarry tempcac = new Clockarry();
+      tempcac = fivebyfive[0][0];
+        String testttt = fivebyfive[0][0].getCvForeignID();
+
+        System.out.println("testttt   " + testttt);
+      String tempi = tempcac.getCvId();
+      int itempi = Integer.parseInt(tempi);
+      if (itempi >= max){
+          itempi = 1;
+      } else
+      {
+          itempi++;
+      }
+
+      tempcac = asinglepull[itempi];
+
+      fivebyfive[0][0] = tempcac;
+
+      String testtt = fivebyfive[0][0].getCvForeignID();
+
+      System.out.println("testtt   " + testtt);
+
+
+    /*   for(int i = 1; i <= max; i++)
       {
         //get the object
         //read the object number number
@@ -82,15 +109,11 @@ public class Start2
         
         tempcac = fivebyfive[0][i];
         
+        //tempcac.
         
+
         
-        
-        
-        
-        
-        
-        
-      }
+      }  */
       
       
       

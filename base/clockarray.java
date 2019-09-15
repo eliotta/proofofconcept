@@ -11,12 +11,7 @@
 
 public class clockarray
 {
-
-
-
-
     clockarrayclass singleclass = new clockarrayclass();
-
 
     int x;
     int y;

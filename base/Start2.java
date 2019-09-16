@@ -76,13 +76,10 @@ public class Start2
 
 
 
-
+        /*
       int max = 5;
       Clockarry tempcac = new Clockarry();
       tempcac = fivebyfive[0][0];
-        String testttt = fivebyfive[0][0].getCvForeignID();
-
-        System.out.println("testttt   " + testttt);
       String tempi = tempcac.getCvId();
       int itempi = Integer.parseInt(tempi);
       if (itempi >= max){
@@ -91,29 +88,38 @@ public class Start2
       {
           itempi++;
       }
-
       tempcac = asinglepull[itempi];
-
       fivebyfive[0][0] = tempcac;
 
-      String testtt = fivebyfive[0][0].getCvForeignID();
-
-      System.out.println("testtt   " + testtt);
 
 
-    /*   for(int i = 1; i <= max; i++)
-      {
-        //get the object
-        //read the object number number
-        //replace the object in the cell with the new object.
-        
-        tempcac = fivebyfive[0][i];
-        
-        //tempcac.
-        
+*/
 
-        
-      }  */
+
+    //loop thru the current row, reading and processing ids, running them thru a function,
+    //and replacing the objects.
+
+
+
+        int max = 4;
+        Clockarry tempcac = new Clockarry();
+        String tempi;
+        int itempi;
+        for(int i = 0; i < max; i++)
+        {
+          tempcac = fivebyfive[0][i];
+          tempi = tempcac.getCvId();
+          itempi = Integer.parseInt(tempi);
+          if (itempi  >= (max)) {
+                itempi = 1;
+          } else
+          {
+              itempi++;
+          }
+
+            tempcac = asinglepull[itempi];
+            fivebyfive[0][i] = tempcac;
+        }
       
       
       

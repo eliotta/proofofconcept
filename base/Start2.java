@@ -10,7 +10,7 @@ Call a class that returns a two dimensional array. The first dim is an index in 
 The second dim are the same quantity of numbers, but in random order. 
 The inputs are the number of digits. The output is a 2 dim array. 
 */
-
+@SuppressWarnings("Duplicates")
 public class Start2
 {
     public static void main(String[] args)
@@ -53,17 +53,17 @@ public class Start2
          fivebyfive = bpca.rowload(fivebyfive, asinglepull, 5, 5, 0);
          
        
-       //this for loop just displays whats in the top row. 
-       for(int i = 0; i < 5; i++)
-        {
-           String a =    fivebyfive[0][i].getCvId();
-           String b =    fivebyfive[0][i].getCvForeignID();
-           String c =    fivebyfive[0][i].getCvDescription();
-           String d =    fivebyfive[0][i].getCvHashkey();
-           int e =    fivebyfive[0][i].getcXpos();
-           int f =    fivebyfive[0][i].getcYpos();
-           System.out.println(" a " + a + " b " + b + " c " + c + " d " + d + " e " + e );
-        }
+       //this is to displays whats in the top row.
+
+
+
+     /*   String a =    fivebyfive[0][0].getCvId();
+        String b =    fivebyfive[0][1].getCvId();
+        String c =    fivebyfive[0][2].getCvId();
+        String d =    fivebyfive[0][3].getCvId();;
+        String e =    fivebyfive[0][4].getCvId();;
+
+        System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );  */
       
       
       //fivebyfive is created at this point and initialized.
@@ -75,32 +75,11 @@ public class Start2
 
 
 
-
-        /*
-      int max = 5;
-      Clockarry tempcac = new Clockarry();
-      tempcac = fivebyfive[0][0];
-      String tempi = tempcac.getCvId();
-      int itempi = Integer.parseInt(tempi);
-      if (itempi >= max){
-          itempi = 1;
-      } else
-      {
-          itempi++;
-      }
-      tempcac = asinglepull[itempi];
-      fivebyfive[0][0] = tempcac;
-
-
-
-*/
-
-
+        //its 1 2 3 4 5
     //loop thru the current row, reading and processing ids, running them thru a function,
     //and replacing the objects.
 
-
-
+        String a, b, c, d, e;
         int max = 4;
         Clockarry tempcac = new Clockarry();
         String tempi;
@@ -110,34 +89,90 @@ public class Start2
           tempcac = fivebyfive[0][i];
           tempi = tempcac.getCvId();
           itempi = Integer.parseInt(tempi);
-          if (itempi  >= (max)) {
-                itempi = 1;
-          } else
-          {
-              itempi++;
-          }
+    //      if (itempi  >= (max)) {
+    //            itempi = 1;
+    //      } else
+    //      {
+    //          itempi++;
+    //      }
 
-            tempcac = asinglepull[itempi];
+            tempcac = asinglepull[(itempi - 1)];
             fivebyfive[0][i] = tempcac;
         }
+         a =    fivebyfive[0][0].getCvId();
+         b =    fivebyfive[0][1].getCvId();
+         c =    fivebyfive[0][2].getCvId();
+         d =    fivebyfive[0][3].getCvId();
+         e =    fivebyfive[0][4].getCvId();
+//        System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
+
+
+
+        int i, j;
+        int maxb = 4;
+         //loop through again, this time its complete.
+        //j is the row and moves up and down, i is the column and moves from side to side.
+        for(j = 1; j < 5; j++)
+        {
+            for (i = 0; i <= max; i++)
+            {
+                tempcac = fivebyfive[(j-1)][i];
+                tempi = tempcac.getCvId();
+                itempi = Integer.parseInt(tempi);
+                if (itempi > (max)) {
+                    itempi = 1;
+                } else {
+                    itempi++;
+                }
+                tempcac = asinglepull[(itempi - 1)];
+                fivebyfive[j][i] = tempcac;
+            }
+            a =    fivebyfive[j][0].getCvId();
+            b =    fivebyfive[j][1].getCvId();
+            c =    fivebyfive[j][2].getCvId();
+            d =    fivebyfive[j][3].getCvId();
+            e =    fivebyfive[j][4].getCvId();
+            System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
+
+        }
+
+
+ /*
       
-      
-      
-      
-      
-      
-      
-     
-              
-           
-           
-           
-          
-               
-      
-      
+
+        //j is the row and moves up and down, i is the column and moves from side to side.
+        for(i = 4; i >= 0  ; i--)
+        {
+            for (j = 1; j < max; j++)
+            {
+                tempcac = fivebyfive[(j-1)][i];
+                tempi = tempcac.getCvId();
+                itempi = Integer.parseInt(tempi);
+                if (itempi >= (max)) {
+                    itempi = 1;
+                } else {
+                    itempi++;
+                }
+                tempcac = asinglepull[itempi];
+                fivebyfive[j][i] = tempcac;
+
+            }
+        }
+*/
+
+
     }  
-  
+
+
+
+
+
+
+
+
+
+
+
     public static void displayshuffle(ArrayList<Integer> arr)
     {
         int bc = 0;

@@ -112,15 +112,17 @@ public class Start2
         int maxb = 4;
          //loop through again, this time its complete.
         //j is the row and moves up and down, i is the column and moves from side to side.
+        //the CvId is the local index
+        String starting = fivebyfive[0][0].getCvId();
+        int istart = Integer.parseInt(starting);
         for(j = 1; j < 5; j++)
         {
             for (i = 0; i <= max; i++)
             {
-                tempcac = fivebyfive[(j-1)][i];
-                tempi = tempcac.getCvId();
+                tempi = fivebyfive[(j-1)][i].getCvId();
                 itempi = Integer.parseInt(tempi);
                 if (itempi > (max)) {
-                    itempi = 1;
+                    itempi = istart;
                 } else {
                     itempi++;
                 }
@@ -132,33 +134,39 @@ public class Start2
             c =    fivebyfive[j][2].getCvId();
             d =    fivebyfive[j][3].getCvId();
             e =    fivebyfive[j][4].getCvId();
-            System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
+    //        System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
 
         }
 
 
- /*
+
       
 
         //j is the row and moves up and down, i is the column and moves from side to side.
-        for(i = 4; i >= 0  ; i--)
-        {
+
+            i = 4;  //last row
             for (j = 1; j < max; j++)
             {
-                tempcac = fivebyfive[(j-1)][i];
-                tempi = tempcac.getCvId();
+                tempi = fivebyfive[(j-1)][i].getCvId();
                 itempi = Integer.parseInt(tempi);
-                if (itempi >= (max)) {
+                if (itempi > (max)) {
                     itempi = 1;
                 } else {
                     itempi++;
                 }
-                tempcac = asinglepull[itempi];
+                tempcac = asinglepull[(itempi - 1)];
                 fivebyfive[j][i] = tempcac;
 
             }
-        }
-*/
+
+
+            a =    fivebyfive[0][4].getCvId();
+            b =    fivebyfive[1][4].getCvId();
+            c =    fivebyfive[2][4].getCvId();
+            d =    fivebyfive[3][4].getCvId();
+            e =    fivebyfive[4][4].getCvId();
+           System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
+
 
 
     }  

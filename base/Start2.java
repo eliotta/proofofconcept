@@ -143,7 +143,7 @@ public class Start2
       
 
         //j is the row and moves up and down, i is the column and moves from side to side.
-
+            /*
             i = 4;  //last row
             for (j = 1; j < max; j++)
             {
@@ -156,9 +156,7 @@ public class Start2
                 }
                 tempcac = asinglepull[(itempi - 1)];
                 fivebyfive[j][i] = tempcac;
-
             }
-
 
             a =    fivebyfive[0][4].getCvId();
             b =    fivebyfive[1][4].getCvId();
@@ -166,6 +164,55 @@ public class Start2
             d =    fivebyfive[3][4].getCvId();
             e =    fivebyfive[4][4].getCvId();
            System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
+            */
+
+
+        i = 4;  //last row
+        //for(i = 4; i< 1: i++)
+        for (j = 1; j < max; j++)
+        {
+            tempi = fivebyfive[(j-1)][i].getCvId();
+            itempi = Integer.parseInt(tempi);
+            if (itempi > (max)) {
+                itempi = 1;
+            } else {
+                itempi++;
+            }
+            tempcac = asinglepull[(itempi - 1)];
+            fivebyfive[j][i] = tempcac;
+        }
+
+
+
+        //moving the last row up one notch.
+        i = 4;  //last row
+        //for(i = 4; i< 1: i++)
+       // for (i = 4; i == 4; )
+        //{
+            for (j = 0; j < max; j++) {
+                tempi = fivebyfive[j][i].getCvId();
+                itempi = Integer.parseInt(tempi);
+                if (itempi > 4) {
+                    itempi = 0;
+                } else {
+                    itempi++;
+                }
+                tempcac = asinglepull[itempi];
+                fivebyfive[j][i] = tempcac;
+            }
+        //}
+        System.out.println("this test");
+        a =    fivebyfive[0][4].getCvId();
+        b =    fivebyfive[1][4].getCvId();
+        c =    fivebyfive[2][4].getCvId();
+        d =    fivebyfive[3][4].getCvId();
+        e =    fivebyfive[4][4].getCvId();
+        System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
+
+
+
+
+
 
 
 

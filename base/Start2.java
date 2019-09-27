@@ -189,13 +189,13 @@ public class Start2
         //for(i = 4; i< 1: i++)
        // for (i = 4; i == 4; )
         //{
-            for (j = 0; j < max; j++) {
+            for (j = 0; j <= max; j++) {
                 tempi = fivebyfive[j][i].getCvId();
                 itempi = Integer.parseInt(tempi);
                 if (itempi > 4) {
                     itempi = 0;
                 } else {
-                    itempi++;
+                    itempi = j;
                 }
                 tempcac = asinglepull[itempi];
                 fivebyfive[j][i] = tempcac;
@@ -210,13 +210,17 @@ public class Start2
         System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e );
 
 
-
-
-
-
-
-
     }  
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -190,37 +190,78 @@ public class Start2
        // for (i = 4; i == 4; )
         //{
 
-        for(int bb = 0; bb < 20; bb++) {
-
-            if(bb == 6)
-                i = i;
-
 
 
             for (j = 0; j <= max; j++) {
                 tempi = fivebyfive[j][i].getCvId();
                 itempi = Integer.parseInt(tempi);
 
-
                 itempi++;
                 if(itempi > 5)
                     itempi = 1;
-
-
-
 
                 tempcac = asinglepull[itempi - 1];
                 fivebyfive[j][i] = tempcac;
             }
 
             //}
-            a = fivebyfive[0][4].getCvId();
+    /*        a = fivebyfive[0][4].getCvId();
             b = fivebyfive[1][4].getCvId();
             c = fivebyfive[2][4].getCvId();
             d = fivebyfive[3][4].getCvId();
             e = fivebyfive[4][4].getCvId();
-            System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e);
+            System.out.println(" " + a + " " + b + " " + c + " " + d + " " + e);  */
+
+
+         //gather the top row into a horizontal single array.
+         //sort the array.
+         //read from the second position to the right.
+         //loop thru.
+         //if any cell is equal to the previous cell, there is a duplicate.
+
+
+        int [] checkdupes = new int[5];
+
+
+        for(i = 0; i < 5; i++ )
+        {
+            tempi = fivebyfive[0][i].getCvId();
+            itempi = Integer.parseInt(tempi);
+            checkdupes[i] = itempi;
         }
+
+        //checkdupes[0] = 5;
+        Arrays.sort(checkdupes);
+        for(i = 0; i < 5; i++ )
+        {
+            int ia = checkdupes[i];
+            System.out.println(ia);
+        }
+
+
+
+
+        for(i = 1; i < 5; i++ )
+        {
+          if(checkdupes[i] == checkdupes[i-1])
+          System.out.println("duplicate duplicate");
+        }
+
+
+         int qr = fivebyfive.length;
+
+
+
+        Clockarry[][]  cfivebyfive = new Clockarry[5][5];
+        cfivebyfive = Arrays.copyOf(fivebyfive, 6);
+
+        int aft = cfivebyfive.length;
+
+        System.out.println("duplicate duplicate");
+
+
+
+
 
     }  
 

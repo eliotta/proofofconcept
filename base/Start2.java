@@ -139,6 +139,21 @@ public class Start2
         }
 
 
+        //setting the orbit flag for the top row of the array.
+        for(i = 0; i <= 4; i++)
+        {
+        fivebyfive[0][i].setOrbitflag('Y');
+        }
+        char aa, bb, cc, dd, ee;
+        aa =    fivebyfive[0][0].getOrbitflag();
+        bb =    fivebyfive[0][1].getOrbitflag();
+        cc =    fivebyfive[0][2].getOrbitflag();
+        dd =    fivebyfive[0][3].getOrbitflag();
+        ee =    fivebyfive[0][4].getOrbitflag();
+                System.out.println(" " + aa + " " + bb + " " + cc + " " + dd + " " + ee );
+
+
+
 
       
 
@@ -216,13 +231,10 @@ public class Start2
          //gather the top row into a horizontal single array.
          //sort the array.
          //read from the second position to the right.
-         //loop thru.
+         //loop through.
          //if any cell is equal to the previous cell, there is a duplicate.
 
-
         int [] checkdupes = new int[5];
-
-
         for(i = 0; i < 5; i++ )
         {
             tempi = fivebyfive[0][i].getCvId();
@@ -258,9 +270,6 @@ public class Start2
         int aft = cfivebyfive.length;
 
         System.out.println("duplicate duplicate");
-
-
-
 
 
     }  

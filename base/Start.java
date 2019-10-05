@@ -101,6 +101,8 @@ public class Start
       
       //load up the top array
         fivebyfive = bpca.rowload(fivebyfive, charlie, 5, 5, 0);
+
+
          
         for(int i = 0; i < 5; i++)
         {

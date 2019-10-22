@@ -6,10 +6,10 @@ public class Start3
 {
     public static void main(String[] args)
     {
-        start2();
+        start3();
     }
 
-    public static void start2()
+    public static void start3()
     {
         //- create temporary one dim array for five items.
         table3array retrndpull = new table3array();
@@ -75,15 +75,21 @@ public class Start3
         //gather the top row into a horizontal single array. Sort.
         //read from the second position to the right.
         //if any cell is equal to the previous cell, there is a duplicate.
-        int [] checkdupes = new int[5];
+        Integer [] checkdupes = new Integer[5];
+        Integer [] checkdupes2 = new Integer[5];
+        Integer [] checkdupes3 = new Integer[5];
+        ArrayList<Integer[]> bucket = new ArrayList<Integer[]>();
         for(i = 0; i < 5; i++ )
         {
-            tempi = fivebyfive[0][i].getCvId();
-            itempi = Integer.parseInt(tempi);
-            checkdupes[i] = itempi;
+          tempi = fivebyfive[0][i].getCvId();
+          itempi = Integer.parseInt(tempi);
+          checkdupes[i] = itempi;
+          checkdupes2[i] = itempi;
         }
 
-        //checkdupes[0] = 5;
+        checkdupes[3] = 8;
+        checkdupes2[3] = 8;
+
         Arrays.sort(checkdupes);
         for(i = 1; i < 5; i++ )
         {
@@ -97,23 +103,41 @@ public class Start3
          }
 
         }
+        //adds the 5 1 dim array that was Not sorted
+        bucket.add(checkdupes2);
+
+        //note: two variables pointing to the same value, and the two values act like pointers to an address.
+        //in java, its called a reference.
+        checkdupes3 = bucket.get(0);
 
 
+        int ab1 = checkdupes3[0];
+        int ab2 = checkdupes3[1];
+        int ab3 = checkdupes3[2];
+        int ab4 = checkdupes3[3];
+        int ab5 = checkdupes3[4];
 
 
-
-
-
-
-
-
-
-
+        String abs1 = Integer.toString(ab1);
+        String abs2 = Integer.toString(ab2);
+        String abs3 = Integer.toString(ab3);
+        String abs4 = Integer.toString(ab4);
+        String abs5 = Integer.toString(ab5);
+        System.out.println("this was third pos " + abs1 + " "  + abs2 + " " +  abs3 + " " +  abs4 + " " + abs5 + " ");
 
 
 
 
     }
+
+
+
+
+
+
+
+
+
 
 
 

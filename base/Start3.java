@@ -78,6 +78,9 @@ public class Start3
         Integer [] checkdupes = new Integer[5];
         Integer [] checkdupes2 = new Integer[5];
         Integer [] checkdupes3 = new Integer[5];
+
+
+        ArrayList<Clockarry> clocklist = new ArrayList<Clockarry>();
         ArrayList<Integer[]> bucket = new ArrayList<Integer[]>();
         for(i = 0; i < 5; i++ )
         {
@@ -124,6 +127,59 @@ public class Start3
         String abs4 = Integer.toString(ab4);
         String abs5 = Integer.toString(ab5);
         System.out.println("this was third pos " + abs1 + " "  + abs2 + " " +  abs3 + " " +  abs4 + " " + abs5 + " ");
+
+
+        //create a list of clockarrys. list is called clocklist.
+        //add new clockarrys called listed to it
+
+
+
+        //testing to see if arraylist loads from arrays and can be fetched.
+        Clockarry listed = new Clockarry();
+        for(i = 0; i < 5; i++)
+        {
+            clocklist.add(fivebyfive[0][i]);
+            listed = clocklist.get(i);
+            String johnson = listed.getCvId();
+            System.out.println("this is Johnson " + johnson + " " + i );
+        }
+
+            //when pulling the values, choose from string character integer. Then, direct
+            //to the right function.
+            //clocklist.   . . .
+
+        /*
+        * do a single full house one, with 2 equals, followed by
+        * three equals. get that to work.
+        *
+        * function.
+        * pulling_class_attr(int strngcharintstrngtoint)
+        * {
+        *
+        *
+        *   strngcharintstrngtoint
+        *   switch statement depending on whether string or in or object.
+        *   note: everthing gets stored as a string array, that way, possible to have on
+        *   one type of input array into equalfunc.
+        *
+        *
+        * }
+
+        function.
+          equalfunc(clockarry singleclockarray, char stringorcharorint, int start, int end, int seq, int ofseq)
+         {
+
+
+
+
+
+
+
+          }
+
+
+          */
+
 
 
 

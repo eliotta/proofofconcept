@@ -151,22 +151,26 @@ public class Start3
         /*
         * do a single full house one, with 2 equals, followed by
         * three equals. get that to work.
-        *
-        * function.
-        * pulling_class_attr(int strngcharintstrngtoint)
-        * {
-        *
-        *
-        *   strngcharintstrngtoint
-        *   switch statement depending on whether string or in or object.
-        *   note: everthing gets stored as a string array, that way, possible to have on
-        *   one type of input array into equalfunc.
-        *
-        *
-        * }
 
+          function.
+          pulling_class_attr(int strngcharintstrngtoint)
+          {
+
+
+            strngcharintstrngtoint
+            switch statement depending on whether string or in or object.
+            note: everthing gets stored as a string array, that way, possible to have on
+            one type of input array into equalfunc.
+
+
+
+         }
+
+
+
+        //seq / of seq means for example second of two functions for full house.
         function.
-          equalfunc(clockarry singleclockarray, char stringorcharorint, int start, int end, int seq, int ofseq)
+          equalfunc(clockarry singleclockarray, int start, int end, int seq, int ofseq)
          {
 
 

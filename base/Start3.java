@@ -156,11 +156,19 @@ public class Start3
           pulling_class_attr(int strngcharintstrngtoint)
           {
 
+            This is the rule.
+            Every variable in every object is a  string.
+            If something is an int, it gets converted to a string before being returned.
+            There is a variable in each class that is the following
+            String stype = "char, char, string, int, int"
+
 
             strngcharintstrngtoint
             switch statement depending on whether string or in or object.
             note: everthing gets stored as a string array, that way, possible to have on
             one type of input array into equalfunc.
+
+
 
 
 

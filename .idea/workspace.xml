@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2491027-e520-4099-b96e-5f2766f357ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/Start3.java" afterPath="$PROJECT_DIR$/base/Start3.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,14 +50,14 @@
       <file leaf-file-name="Start3.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/Start3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+            <state relative-caret-position="217">
+              <caret line="162" column="34" lean-forward="false" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
               <folding>
                 <element signature="e#22#53#0" expanded="true" />
                 <element signature="e#388#397#0" expanded="true" />
                 <element signature="e#2522#2533#0" expanded="true" />
                 <element signature="e#2588#2599#0" expanded="true" />
-                <element signature="e#5695#5704#0" expanded="true" />
+                <element signature="e#6000#6009#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -822,14 +821,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/Start3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+        <state relative-caret-position="217">
+          <caret line="162" column="34" lean-forward="false" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
           <folding>
             <element signature="e#22#53#0" expanded="true" />
             <element signature="e#388#397#0" expanded="true" />
             <element signature="e#2522#2533#0" expanded="true" />
             <element signature="e#2588#2599#0" expanded="true" />
-            <element signature="e#5695#5704#0" expanded="true" />
+            <element signature="e#6000#6009#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -159,14 +159,58 @@ public class Start3
             This is the rule.
             Every variable in every object is a  string.
             If something is an int, it gets converted to a string before being returned.
-            There is a variable in each class that is the following
-            String stype = "char, char, string, int, int"
 
 
-            strngcharintstrngtoint
-            switch statement depending on whether string or in or object.
-            note: everthing gets stored as a string array, that way, possible to have on
-            one type of input array into equalfunc.
+            the class objects, (which in this case are representatives of cards), contain an arraylist of
+            three dimensional arrays. The first value in each three dimensional array is the name of the
+            object, the next dimension is the  type. The final dimension is the string itself.
+            An example of a 3d array is something[][][]. The three dimensions are type, name, and value.
+
+            Within the object is a three dimensional string array of function names, and the return type
+            for the function. The third dimension is the value of the return of the function, in string form.
+
+            function to collect the different like objects from the different classes. For example.
+            collect the suites from the five cards. or the card numbers from the five cards.
+
+            function to compare the five numbers from the five cards.
+            In this case there are two functions hat
+
+
+
+
+            Tally function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -160,7 +160,6 @@ public class Start3
             Every variable in every object is a  string.
             If something is an int, it gets converted to a string before being returned.
 
-
             the class objects, (which in this case are representatives of cards), contain an arraylist of
             three dimensional arrays. The first value in each three dimensional array is the name of the
             object, the next dimension is the  type. The final dimension is the string itself.
@@ -168,12 +167,22 @@ public class Start3
 
             Within the object is a three dimensional string array of function names, and the return type
             for the function. The third dimension is the value of the return of the function, in string form.
+            In future versions, the values may be populated outside the object, but in this version, the
+            value is manually entered and populated by hand withing the object. The user is presented with
+            a fully functional arraylist of three dimensional arrays.
 
             function to collect the different like objects from the different classes. For example.
             collect the suites from the five cards. or the card numbers from the five cards.
 
             function to compare the five numbers from the five cards.
-            In this case there are two functions hat
+            In this case, the fhouse has two functions that look for equal values, but at different points at the
+            five object array. Once at the first point, an once at the third point.
+
+            If the array passes the fhouse test, the array is tallied, with the tally amount added to an array along
+            with the five objects, in order.  This array is then deposited in an arraylist. The highest tally is presented.
+            Later, there will be most likely tally above some acceptable minimum, etc, depending on what the
+            goal is.
+
 
 
 

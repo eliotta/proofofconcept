@@ -185,6 +185,42 @@ public class Start3
 
 
 
+            Mon 11 4. Again.
+            Create a 2 dim array in clockarry. Also a 3 dim array.
+            The two dim array is created by hand in the clockarry object. Its the return type. And the
+            other dim is the object number. It was the object name, but the number works as a key
+            to a value. How. And why cant the name be used as a key? it can be. The program asks for
+            cardsuite, and the cardsuite 3 dim array gets called. Getting from cardsuite to the actual
+            array is done how? A keyed Hashmap?
+
+            public HashMap<String, table3obj> gettable3map(){   //t3map is a hashmap return t3map;}
+
+
+
+            public void puttable3map(String idKey, table3obj tt3) {  t3map.put(idKey, tt3);  }
+
+             nullzero.setId("0");
+             nullzero.setForeignid("0");
+             nullzero.setDescription("Nullzero ");
+             nullzero.setHashkey("nulllzero");
+             nullzero.setPulled('N');
+             cards.puttable3map("nullzero", nullzero);
+
+
+            Also, whats the process?
+
+            The program is reading a string, and supplying an int, char or string depending on what the
+            function calls for. Maybe its not a function name. Maybe its an attribute, like Suite,
+            or Color.
+
+             
+
+
+
+
+
+
+
 
 
             Tally function.

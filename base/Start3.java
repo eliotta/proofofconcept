@@ -73,8 +73,6 @@ public class Start3
 
 
         //gather the top row into a horizontal single array. Sort.
-        //read from the second position to the right.
-        //if any cell is equal to the previous cell, there is a duplicate.
         Integer [] checkdupes = new Integer[5];
         Integer [] checkdupes2 = new Integer[5];
         Integer [] checkdupes3 = new Integer[5];
@@ -90,29 +88,99 @@ public class Start3
           checkdupes2[i] = itempi;
         }
 
-        checkdupes[3] = 8;
-        checkdupes2[3] = 8;
+//        checkdupes[3] = 2;
+//        checkdupes2[3] = 2;
 
         Arrays.sort(checkdupes);
+        //read from the second position to the right.
+        //if any cell is equal to the previous cell, there is a duplicate.
+
+        char flipadup = 'n';
+
         for(i = 1; i < 5; i++ )
         {
          if(checkdupes[i] == checkdupes[i-1])
          {
              System.out.println("duplicate duplicate");
+             flipadup = 'y';
          }
          else
          {
-             System.out.println("write to outputarray");
+
          }
 
         }
         //adds the 5 1 dim array that was Not sorted
-        bucket.add(checkdupes2);
+        //if there were no dupes.
+        if(flipadup == 'n')
+           bucket.add(checkdupes2);
+        else {
+            System.out.println("duplicate duplicate");
+        };
+
+
+
 
         //note: two variables pointing to the same value, and the two values act like pointers to an address.
         //in java, its called a reference.
         checkdupes3 = bucket.get(0);
 
+
+
+        //create a list of clockarrys. list is called clocklist.
+        //add new clockarrys called listed to it
+
+
+
+            //when pulling the values, choose from string character integer. Then, direct
+            //to the right function.
+            //clocklist.   . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+
+
+        //testing to see if arraylist loads from arrays and can be fetched.
+        Clockarry listed = new Clockarry();
+        for(i = 0; i < 5; i++)
+        {
+            clocklist.add(fivebyfive[0][i]);
+            listed = clocklist.get(i);
+            String johnson = listed.getCvId();
+            System.out.println("this is Johnson " + johnson + " " + i );
+        }
 
         int ab1 = checkdupes3[0];
         int ab2 = checkdupes3[1];
@@ -128,25 +196,8 @@ public class Start3
         String abs5 = Integer.toString(ab5);
         System.out.println("this was third pos " + abs1 + " "  + abs2 + " " +  abs3 + " " +  abs4 + " " + abs5 + " ");
 
+        */
 
-        //create a list of clockarrys. list is called clocklist.
-        //add new clockarrys called listed to it
-
-
-
-        //testing to see if arraylist loads from arrays and can be fetched.
-        Clockarry listed = new Clockarry();
-        for(i = 0; i < 5; i++)
-        {
-            clocklist.add(fivebyfive[0][i]);
-            listed = clocklist.get(i);
-            String johnson = listed.getCvId();
-            System.out.println("this is Johnson " + johnson + " " + i );
-        }
-
-            //when pulling the values, choose from string character integer. Then, direct
-            //to the right function.
-            //clocklist.   . . .
 
         /*
         * do a single full house one, with 2 equals, followed by
@@ -213,53 +264,8 @@ public class Start3
             function calls for. Maybe its not a function name. Maybe its an attribute, like Suite,
             or Color.
 
-             
-
-
-
-
-
-
-
-
 
             Tally function.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
          }
 
@@ -271,35 +277,12 @@ public class Start3
          {
 
 
-
-
-
-
-
           }
 
 
           */
 
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public static void displayshuffle(ArrayList<Integer> arr)

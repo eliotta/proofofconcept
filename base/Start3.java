@@ -88,8 +88,8 @@ public class Start3
           checkdupes2[i] = itempi;
         }
 
-//        checkdupes[3] = 2;
-//        checkdupes2[3] = 2;
+        //checkdupes[3] = 2;
+        //checkdupes2[3] = 2;
 
         Arrays.sort(checkdupes);
         //read from the second position to the right.
@@ -104,14 +104,10 @@ public class Start3
              System.out.println("duplicate duplicate");
              flipadup = 'y';
          }
-         else
-         {
-
-         }
-
         }
-        //adds the 5 1 dim array that was Not sorted
-        //if there were no dupes.
+        //adds the 5 1 dim array that was Not sorted, if there are no dupes.
+        //this needs to be looped. And a process moving the top line like a clock needs to be added.
+        //and then the pattern check needs to be incorporated. s
         if(flipadup == 'n')
            bucket.add(checkdupes2);
         else {
@@ -123,7 +119,7 @@ public class Start3
 
         //note: two variables pointing to the same value, and the two values act like pointers to an address.
         //in java, its called a reference.
-        checkdupes3 = bucket.get(0);
+        //checkdupes3 = bucket.get(0);
 
 
 

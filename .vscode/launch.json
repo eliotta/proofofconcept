@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Start3",
+            "request": "launch",
+            "mainClass": "Start3",
+            "projectName": "proofofconcept_b65dff74"
+        }
+    ]
+}

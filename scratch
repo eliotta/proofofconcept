@@ -55,7 +55,29 @@ build the five character array used to create the first row of the clock.
         Note: This whole time, the object index numbers (the Y value) is filled out, and nothing else. Nothing else will 
         be filled out until the horizontal array is finally written out. 
           
-          
+           
+
+         /*  111919
+	 Clockarry[][] template_ fivebyfive =   bpca.init_a_twodim_arry(5, 5)
+	 template_fivebyfive = bpca.rowload(template_fivebyfive, asinglepull, 5, 5, 0);    
+      */	
+
+	populating the other clockarray
+              fivebyfive[j][i] = tempcac;
+               /*  111919
+	 template_ fivebyfive[j][i] =  tempcac; 
+              */	
+ 	 
+     /*  111919   after the loop populating both the fivebyfive and its clone.  
+String getdesA = fivebyfive[0][2].getCvDescription();
+String getdesB = template_fivebyfive[0][2].getCvDescription();
+System.out.println(" should be the same  " +  getdesA + " " + getdesB + "  ");   
+getdesA = fivebyfive[0][2].setCvDescription();
+getdesA = fivebyfive[0][2].getCvDescription();
+getdesB = template_fivebyfive[0][2].getCvDescription();
+System.out.println(" should be different  " +  getdesA + " " + getdesB + "  ");   
+   */
+
         
         
         

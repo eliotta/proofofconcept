@@ -193,7 +193,9 @@ public class buildpopulateclockarray
     {
         Clockarry[] clockpull = new Clockarry[lnumofpulls]; 
         table3array retrndpull = new table3array();
-        table3obj randobj; 
+        
+        
+        table3obj randobj = new table3obj(); 
         String contostring;
         int i = 0;
         int ii = 0;

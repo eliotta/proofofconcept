@@ -133,4 +133,16 @@ public class Clockarry  implements Clocate,Cvalue
         return convertedID;
     }
 
+
+
+    public Clockarry retwash(Clockarry oldclockarry)
+    {
+        Clockarry tempclockarry = new Clockarry();
+        this.setCvDescription(oldclockarry.getCvDescription());
+        this.setOrbitflag('B'); 
+        this.setCvId(oldclockarry.getCvId());   
+        return tempclockarry;    
+
+    }
+
 }

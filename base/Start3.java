@@ -33,15 +33,24 @@ public class Start3
 
         //Create initialize and populate the empty five by five clock array.
         Clockarry[][]  fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+        Clockarry[][]  template_fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+
+
+
+        
 
         //load up the top array
         fivebyfive = bpca.rowload(fivebyfive, asinglepull, 5, 5, 0);
+        template_fivebyfive = bpca.rowload(template_fivebyfive, asinglepull, 5, 5, 0);
+
 
         String a, b, c, d, e;
         int max = 4;
         Clockarry tempcac = new Clockarry();
         String tempi;
         int itempi;
+
+
 
         //j is the row and moves up and down, i is the column and moves from side to side.
         //the CvId is the local index
@@ -61,15 +70,50 @@ public class Start3
                 }
                 tempcac = asinglepull[(itempi - 1)];
                 fivebyfive[j][i] = tempcac;
+                template_fivebyfive[j][i] = tempcac;
             }
         }
 
+           
+            String getdesA = fivebyfive[0][2].getCvDescription();
+            String getdesB = template_fivebyfive[0][2].getCvDescription();
+            System.out.println(" should be the same  " +  getdesA + " " + getdesB + "  ");   
+            tempcac.setCvDescription("cvDescripn");
+            fivebyfive[0][2] = tempcac;
+            getdesA = fivebyfive[0][2].getCvDescription();
+            getdesB = template_fivebyfive[0][2].getCvDescription();
+            System.out.println(" should be different  " +  getdesA + " " + getdesB + "  "); 
+
+
 
         //setting the orbit flag for the top row of the array.
-        for(i = 0; i <= 4; i++)
+          for(i = 0; i <= 4; i++)
         {
-            fivebyfive[0][i].setOrbitflag('Y');
+            tempcac = new Clockarry();
+            tempcac.retwash(fivebyfive[0][1]);
+            tempcac.setOrbitflag('R');
+              fivebyfive[0][i].setOrbitflag('Y');
+            fivebyfive[0][1] = tempcac;
         }
+
+    
+
+          tempcac.retwash(fivebyfive[0][1]);
+          tempcac.setOrbitflag('B');
+          tempcac.setCvDescription("tempcac description");
+          tempcac.setCvForeignID("cv foreign id");
+          fivebyfive[0][1] = tempcac;
+
+        
+
+        char NY = fivebyfive[0][1].getOrbitflag();
+        char nn = template_fivebyfive[0][1].getOrbitflag();
+        String cvfchanged = template_fivebyfive[0][1].getCvForeignID();
+        String cvfchanged2 = fivebyfive[0][1].getCvForeignID();
+        System.out.println("  should not be the same  " + NY + " " + nn );
+        System.out.println("  should not be the same  " + cvfchanged + " " + cvfchanged2 );
+        
+
 
 
         //gather the top row into a horizontal single array. Sort.
@@ -102,7 +146,7 @@ public class Start3
         {
          if(checkdupes[i] == checkdupes[i-1])
          {
-             System.out.println("duplicate duplicate");
+             System.out.println("duplicate duplicate ");
              flipadup = 'y';
          }
         }
@@ -133,30 +177,7 @@ public class Start3
             //to the right function.
             //clocklist.   . . .
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 

@@ -74,7 +74,7 @@ public class Start3
             }
         }
 
-           
+           /*
             String getdesA = fivebyfive[0][2].getCvDescription();
             String getdesB = template_fivebyfive[0][2].getCvDescription();
             System.out.println(" should be the same  " +  getdesA + " " + getdesB + "  ");   
@@ -83,33 +83,33 @@ public class Start3
             getdesA = fivebyfive[0][2].getCvDescription();
             getdesB = template_fivebyfive[0][2].getCvDescription();
             System.out.println(" should be different  " +  getdesA + " " + getdesB + "  "); 
-
+            */
 
 
         //setting the orbit flag for the top row of the array.
           for(i = 0; i <= 4; i++)
         {
             tempcac = new Clockarry();
-            tempcac.retwash(fivebyfive[0][1]);
+            tempcac.retwash(fivebyfive[0][0]);
             tempcac.setOrbitflag('R');
-              fivebyfive[0][i].setOrbitflag('Y');
-            fivebyfive[0][1] = tempcac;
+     //         fivebyfive[0][i].setOrbitflag('Y');
+            fivebyfive[0][0] = tempcac;
         }
 
     
 
-          tempcac.retwash(fivebyfive[0][1]);
+          tempcac.retwash(fivebyfive[0][0]);
           tempcac.setOrbitflag('B');
           tempcac.setCvDescription("tempcac description");
           tempcac.setCvForeignID("cv foreign id");
-          fivebyfive[0][1] = tempcac;
+          fivebyfive[0][0] = tempcac;
 
         
 
-        char NY = fivebyfive[0][1].getOrbitflag();
-        char nn = template_fivebyfive[0][1].getOrbitflag();
-        String cvfchanged = template_fivebyfive[0][1].getCvForeignID();
-        String cvfchanged2 = fivebyfive[0][1].getCvForeignID();
+        char NY = fivebyfive[0][0].getOrbitflag();
+        char nn = template_fivebyfive[0][0].getOrbitflag();
+        String cvfchanged = template_fivebyfive[0][0].getCvForeignID();
+        String cvfchanged2 = fivebyfive[0][0].getCvForeignID();
         System.out.println("  should not be the same  " + NY + " " + nn );
         System.out.println("  should not be the same  " + cvfchanged + " " + cvfchanged2 );
         

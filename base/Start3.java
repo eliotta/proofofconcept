@@ -20,7 +20,7 @@ public class Start3
         displayshuffle(arrlio);
 
         //Populate tagble 3
-        loader ldr = new loader();
+        loader ldr = new loader(); 
         ldr.creating();
 
 

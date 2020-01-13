@@ -52,7 +52,7 @@ public class teststart
         int totalpulls = 5;
 
         randLoad.rndld();
-        System.out.println("  within call randload   ");
+        System.out.println("  within call randload   x ");
 
         //this is going to be the start of the randomized pull function
 

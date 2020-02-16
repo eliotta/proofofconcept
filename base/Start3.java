@@ -1,3 +1,5 @@
+
+
 import java.util.*;
 
 
@@ -262,7 +264,11 @@ public class Start3
             cardsuite, and the cardsuite 3 dim array gets called. Getting from cardsuite to the actual
             array is done how? A keyed Hashmap?
 
-            public HashMap<String, table3obj> gettable3map(){   //t3map is a hashmap return t3map;}
+            public HashMap<String, table3obj> gettable3map()
+            {   
+                //t3map is a hashmap 
+                return t3map;
+            }
 
 
 

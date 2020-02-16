@@ -168,6 +168,7 @@ public class buildpopulateclockarray
      {
        singleclockarry[i] = new Clockarry();
        singleclockarry[i].setcYpos(i); 
+       singleclockarry[i].setcYloc(i);
      }
        return singleclockarry;
    }
@@ -180,8 +181,9 @@ public class buildpopulateclockarray
        for(int j = 0;  j < dim2;  j++)
        {
        double_clockarry[i][j] = new Clockarry();
-       double_clockarry[i][j].setcXpos(i);
-       double_clockarry[i][j].setcYpos(j);  
+       
+       double_clockarry[i][j].setcXloc(i);
+       double_clockarry[i][j].setcYloc(j);  
        }     
      }    
        return double_clockarry;
@@ -230,6 +232,10 @@ public class buildpopulateclockarray
               clockpull[i].setCvHashkey(t_hashkey);
                clockpull[i].setcXpos(0);
                clockpull[i].setcYpos(i);
+               clockpull[i].setcXloc(0);
+               clockpull[i].setcYloc(i);
+              
+
                idindex++;
           } else
           {
@@ -281,7 +287,7 @@ public class buildpopulateclockarray
   - run the this temporary  
     
     
-  -   
+  - 
     
     
     

@@ -3,6 +3,14 @@ public class Clockarry  implements Clocate,Cvalue
 
     int cXpos;
     int cYpos;
+       
+    int hashindex;
+
+
+
+    int cXloc;
+    int cYloc;
+
     String cvdes;
 
     char orbitflag = 'N';
@@ -24,9 +32,25 @@ public class Clockarry  implements Clocate,Cvalue
         System.out.println("this is showlocation");
     }
 
+    public void showposition()
+    {
+        System.out.println("this is showposition");
+    }
+
+
     public void showvalue()
     {
         System.out.println("this is showvalue");
+    }
+
+    public int gethashindex()
+    {
+        return hashindex;
+    }
+
+    public void sethashindex(int hashindex)
+    {
+       this.hashindex = hashindex;
     }
 
     public int getcXpos()
@@ -48,6 +72,43 @@ public class Clockarry  implements Clocate,Cvalue
     {
         this.cYpos = cYpos;
     }
+
+    public int getcXloc()
+    {
+        return cXloc;
+    }
+
+    public void setcXloc(int cXloc)
+    {
+        this.cXloc = cXloc;
+    }
+
+    public int getcYloc()
+    {
+        return cYloc;
+    }
+
+    public void setcYloc(int cYloc)
+    {
+        this.cYloc = cYloc;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public String getCvId()

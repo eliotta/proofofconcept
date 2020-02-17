@@ -1,89 +1,606 @@
-Overview of what needs to be running in the project. 
 
-create a separate package for what was already done, and a package for new stuff. 
+ 
+Overview. 
+. Pull objects randomely from table 3. 
+. Calculate the position (temp) and the location (perm) for each object. .
+. Create a hashmap of the objects. After the clock is built, this is where objects
+  are pulled from. 
+. Build the first, permanent, table clockarray. 
+. Install the permanent location and temp pos number, which the 
+  first time through, should be the same. 
+. Build a hash made from the top row to act as the completion flag. 
+. Build the first temporary clockarray. The first time through, it will be the same
+  as the permanent array. 
+. Check for duplicate cells.
+. Pull the objects from the object hashmap. 
+. Build a final hashmap for the unique rows.
+. Build a procedure to create keys for non default objects. The keys are a combination 
+  of Location, Position, and index.  
+. Set rules for the default / non default objects that change depending on whether 
+  they are being accessed by the pos, loc, or index. For example, an object whose
+  change depends on the position in a row it is, might be accessed via the pos piece of 
+  the hash.
+. Build a hash of a row. Compare to flag variable. 
+. Attempt to insert row hash into final hashmap. 
+. Move the temp clockarray up one position using a function to calculate position. 
+  Involves invoking end of column function, and next position function.  
+. Repeat create hashes test write procedures. 
+   
+#########
+displayshuffle(arrlio);
+Clockarry[] asinglepull = bpca.clockarry_pull(0, 5, t3l, arrlio);
+. Create a function that moves the clock one position in one row.
+The input is the clock and the column to be moved.
+//assuming, correctly or not, that x is up and down, and y is left and right.
+//there is an x y pos index that doesnt change, and a temporary one that does
+//change.  first pulling from the original clockarry, then the altered 
+//temporary clockarrys.
+public  Clockarry added_one_clockarry(int inputx, int inputy,
+     Clockarray inClock[max][max]) {
+ Clockarry[] temca = new Clockarry[5];
+ for(int y = 0; y < max; y++ ) {
+ int cellindex = inClock.getIndex(x,y);
+ cellindex++
+ if(cellindex  >= max)
+      cellindex = 1 ;
+//populate the single array that represents the top row.
+ temca[y] = inClock[x][cellindex]
+ some_clockarry[x][y] = temca[y];
+ }
+return some_clockarry[][];
+}
+. Create a function that populates index numbers in the 5 x 5 clock 
+again.
+. Create a function that populates index numbers in the 5 x 5 clock array.
+Clockarry[][]  fivebyfive_temp =   new Clockarry[5][5];
+fivebyfive_temp =   bpca.init_a_twodim_arry(5, 5);
+/*
+starting from the top right. read x, y pos, add 1 to . if less than or equal to max, and flag of new y is no,  pull row represented by the result.  If not less than max, and flag is N, than Y  = 1. Pull 1.    If flag = Y, whatever Max equals, Y = 1. and X = -1.
+If X is less than zero, the function, and the program are done.
+*/
+. Create a function that moves the clock one position in one row.
+The input is the clock and the column to be moved.
+//this function would be inside a for loop
+public clockarry[][] cwnewpos(clockarry[][] oldclockarry, newclockarry xpos, ypos){ 
+ int xx = oldclockarry.getposx(x);
+ xx++;
+ newclockarry[y][xx] = oldclockarry[y][xx];
+ return newclockarry;
+}
+. Create a function moves the clock one position to the left.
+When a flag is reached, a column is reset, and the focus moves one column to
+the left.
+ public int yvalue(clockarry[][] oldclockarry, int ypos) { 
+ int yy = oldclockarry.getposx(y);
+ yy--;
+ if(yy < 1)
+ System.out.printl('Program is dones')
+ return 0
+ else
+ return
+ return y;
+}
+ 
+. Create a function that determines  what the next number will be in a row.
+The input is the clockarray, the position being worked on (x and y axis)
+public int yvalue(clockarry[][] oldclockarry, int indx) { 
+ int xx oldclockarry.getposx(indx);
+ xx++;
+ char xflag = fivebyfive.getflag(y,xx)
+ 
+ if(xx >= max || xflag = 'Y')
+ xx = 1;
+ if(xflag == 'Y)
+ Y--;
+ if(Y < 1)
+ Systiem.out.printl('Program is dones');
+ return xx;
+}
+. Create a function that tests if calculated number is greater than max.
+public int yvalue(clockarry[][] oldclockarry, int indx) { 
+ int xx oldclockarry.getposx(indx);
+ xx++;
+ char xflag = fivebyfive.getflag(y,xx)
+ 
+ if(xx >= max)
+return 1
+else
+return 0;
+.  Create a function that checks to see if the flag is set to Y
+public int yvalue(clockarry[][] oldclockarry, int indx) { 
+ char xflag = fivebyfive.getflag(y,xx)
+ if(xflag == 'Y')
+ return 1
+ else
+ return 0;
+ }
+. Create a function to react if the flag is Y and the number is greater than max.
+public int bothflagandgreaterx(clockarry oldclockarry[int y][int x], int indx) {
+char xflag = oldclockarry[int y][int x].getflag();
+char xrow = oldclockarry[y][x].getflag();
+if((xflag == 'Y' ) &&  (xrow >= max))
+return 1
+else
+return 0;
+}
+.  Create a function to react if the flag is Y and the number is less than max.
+public int flaggreaterlessthanmax(clockarry oldclockarry[int y][int x], int indx) {
+char xflag = oldclockarry[int y][int x].getflag();
+char xrow = oldclockarry[y][x].getflag();
+if((xflag == 'Y' ) &&  (xrow < max))
+return 1
+else
+return 0;
+}
+. Create a function that calculates the  X value.
+public int whatisthexvalue(clockarry[][] oldclockarry[int y][int x]) { 
+ int xx = oldclockarry[y][x].getxpos()
+ return xx
+ }
+. Create a function that calculates the Y value.
+public int whatistheyvalue(clockarry[][] oldclockarry[int y][int x]) { 
+ int yy = oldclockarry[y][x].getypos()
+ return yy
+ }
+. Create a function that pulls the X,Y value from the permanent clockarray.
+public String whatisthexandyvalue(clockarry[][] oldclockarry[int y][int x]) { 
+ int yy = oldclockarry[y][x].getypos()
+ int yy = oldclockarry[y][x].getypos()
+ String xandy = xx + " " + yy
+ return xandy
+ }
+. Create a function to react if the flag is Y, and all the flags are Y.   
+public int arealltheflagsy(clockarry[][] aclockarry[int y][int x]) {
+char xflag;
+int flagcount = 0
+for(int i = 0; i <= max; i++)
+{
+   xflag = aclockarry1[y][i].getflag();
+ if (xflag == Y)
+ flagcount++
+}
+if(flagcount > (max - 1))
+return 1
+else
+return 0;
+}
+. Create a function that builds a hash from a row thats to be processed.
+public String createahash(clockarry[][] aclockarry[int y][0]) {
+String  xappend = " ";
+String xa = " ";
+int xx = 0;
+for(int i = 0; i <= max; i++)
+{
+   xx = aclockarry1[y][i].getXpos();
+ xa = Int_toString(xx);
+ xappend = xappend + " " + xa;
+}
+return xappend;
+}
+. Create a function that reacts when the row is skipped.
+public int arealltheflagsy(clockarry[][] aclockarry[int y][int x]) {
+int nextx = x;
+if x > max
+nextx = 1;
+if(xpos >= max)
+ypos = ypos--;
+ if(ypos <= 0)
+AND if(xpos >= max)
+{
+return 1
+}
+else
+return 0;
+}
+. Create a function that inserts the newly created row, if the row doesn't already exist in the successful rows hash.
+public  HashMap<String, singlerow_clockarry>  insertarowintothefinalhash
+(HashMap<String, singlerow_clockarry>  insertarowintothefinalhash, String hashinput, singlerow_clockarry single_row)
+{
+  insertarowintothefinalhash .add(hashinput, single_row);
+}
+#########
+import java.util.*;
+@SuppressWarnings("Duplicates")
+public class Start3
+{
+    public static void main(String[] args)
+    {
+        start3();
+    }
+    public static void start3()
+    {
+        //- create temporary one dim array for five items.
+        table3array retrndpull = new table3array();
+        //Create a random order of 51.
+        ArrayList<Integer> arrlio = new ArrayList<Integer>(51);
+        arrlio = numshuffle(51);
+        displayshuffle(arrlio);
+        //Populate tagble 3
+        loader ldr = new loader();
+        ldr.creating();
+        //pull five. create a single array thats a five object pull.
+        table3list t3l = new table3list();
+        t3l = ldr.gettablelist();
+        buildpopulateclockarray bpca = new buildpopulateclockarray();
+        Clockarry[] asinglepull = bpca.clockarry_pull(0, 5, t3l, arrlio);
+        //Create initialize and populate the empty five by five clock array.
+        Clockarry[][]  fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+        Clockarry[][]  template_fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+        //load up the top array
+        fivebyfive = bpca.rowload(fivebyfive, asinglepull, 5, 5, 0);
+        template_fivebyfive = bpca.rowload(template_fivebyfive, asinglepull, 5, 5, 0);
+        String a, b, c, d, e;
+        int max = 4;
+        Clockarry tempcac = new Clockarry();
+        String tempi;
+        int itempi;
+        //j is the row and moves up and down, i is the column and moves
+       //from side to side.
+        //the CvId is the local index
+        int i, j;
+        String starting = fivebyfive[0][0].getCvId();
+        int istart = Integer.parseInt(starting);
+        for(j = 1; j < 5; j++)
+        {
+            for (i = 0; i <= max; i++)
+            {
+                tempi = fivebyfive[(j-1)][i].getCvId();
+                itempi = Integer.parseInt(tempi);
+                if (itempi > (max)) {
+                    itempi = istart;
+                } else {
+                    itempi++;
+                }
+                tempcac = asinglepull[(itempi - 1)];
+                fivebyfive[j][i] = tempcac;
+                template_fivebyfive[j][i] = tempcac;
+            }
+        }
+           /*
+            String getdesA = fivebyfive[0][2].getCvDescription();
+            String getdesB = template_fivebyfive[0][2].getCvDescription();
+            System.out.println(" should be the same  " +  getdesA + " " + getdesB + "  ");  
+            tempcac.setCvDescription("cvDescripn");
+            fivebyfive[0][2] = tempcac;
+            getdesA = fivebyfive[0][2].getCvDescription();
+            getdesB = template_fivebyfive[0][2].getCvDescription();
+            System.out.println(" should be different  " +  getdesA + " " + getdesB + "  ");
+            */
+        //setting the orbit flag for the top row of the array.
+          for(i = 0; i <= 4; i++)
+        {
+            tempcac = new Clockarry();
+            tempcac.retwash(fivebyfive[0][0]);
+            tempcac.setOrbitflag('R');
+     //         fivebyfive[0][i].setOrbitflag('Y');
+            fivebyfive[0][0] = tempcac;
+        }
+   
+          tempcac.retwash(fivebyfive[0][0]);
+          tempcac.setOrbitflag('B');
+          tempcac.setCvDescription("tempcac description");
+          tempcac.setCvForeignID("cv foreign id");
+          fivebyfive[0][0] = tempcac;
+       
+        char NY = fivebyfive[0][0].getOrbitflag();
+        char nn = template_fivebyfive[0][0].getOrbitflag();
+        String cvfchanged = template_fivebyfive[0][0].getCvForeignID();
+        String cvfchanged2 = fivebyfive[0][0].getCvForeignID();
+        System.out.println("  should not be the same  " + NY + " " + nn );
+        System.out.println("  should not be the same  " + cvfchanged + " " +  
+        cvfchanged2 );
+       
+        //gather the top row into a horizontal single array. Sort.
+        Integer [] checkdupes = new Integer[5];
+        Integer [] checkdupes2 = new Integer[5];
+        Integer [] checkdupes3 = new Integer[5];
+        //added file
+        ArrayList<Clockarry> clocklist = new ArrayList<Clockarry>();
+        ArrayList<Integer[]> bucket = new ArrayList<Integer[]>();
+        for(i = 0; i < 5; i++ )
+        {
+          tempi = fivebyfive[0][i].getCvId();
+          itempi = Integer.parseInt(tempi);
+          checkdupes[i] = itempi;
+          checkdupes2[i] = itempi;
+        }
+        Arrays.sort(checkdupes);
+        //read from the second position to the right.
+        //if any cell is equal to the previous cell, there is a duplicate.
+        char flipadup = 'n';
+        for(i = 1; i < 5; i++ )
+        {
+         if(checkdupes[i] == checkdupes[i-1])
+         {
+             System.out.println("duplicate duplicate ");
+             flipadup = 'y';
+         }
+        }
+        //adds the 5 1 dim array that was Not sorted, if there are no dupes.
+        //this needs to be looped. And a process moving the top line like a clock
+        //needs to be added.
+        //and then the pattern check needs to be incorporated. s
+        if(flipadup == 'n')
+           bucket.add(checkdupes2);
+        else {
+            System.out.println("duplicate duplicate");
+        };
+##########
+##########
+this is a packaging of the first page.
+Public clockarry[][] newrandombuilttwodimarray(int max, int, cardtotal)
+{
+ 
+        table3array retrndpull = new table3array();
+        //Create a random order of 51.
+        ArrayList<Integer> arrlio = new ArrayList<Integer>(51);
+        arrlio = numshuffle(51);
+        displayshuffle(arrlio);
+        //Populate tagble 3
+        loader ldr = new loader();
+        ldr.creating();
+        //pull five. create a single array thats a five object pull.
+        table3list t3l = new table3list();
+        t3l = ldr.gettablelist();
+        buildpopulateclockarray bpca = new buildpopulateclockarray();
+        Clockarry[] asinglepull = bpca.clockarry_pull(0, 5, t3l, arrlio);
+        //Create initialize and populate the empty five by five clock array.
+        Clockarry[][]  fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+        Clockarry[][]  template_fivebyfive =   bpca.init_a_twodim_arry(5, 5);
+        //load up the top array
+        fivebyfive = bpca.rowload(fivebyfive, asinglepull, 5, 5, 0);
+        template_fivebyfive = bpca.rowload(template_fivebyfive, asinglepull, 5, 5, 0);
+ 
+        int max = 4;
+        Clockarry tempcac = new Clockarry();
+        String tempi;
+        int itempi;
+        int i, j;
+        String starting = fivebyfive[0][0].getCvId();
+        int istart = Integer.parseInt(starting);
+        for(j = 1; j < 5; j++)
+        {
+            for (i = 0; i <= max; i++)
+            {
+                tempi = fivebyfive[(j-1)][i].getCvId();
+                itempi = Integer.parseInt(tempi);
+                if (itempi > (max)) {
+                    itempi = istart;
+                } else {
+                    itempi++;
+                }
+                tempcac = asinglepull[(itempi - 1)];
+                fivebyfive[j][i] = tempcac;
+                template_fivebyfive[j][i] = tempcac;
+            }
+        }
+  return aclockarray[5][5]
+ }
+ 
+Public clockarry[][] clockarrywithflagsset(clockarray[][] fullclockarry, int xval, intyval){ 
+        Clockarry tempcac = new Clockarry();
+//set the orbit flag for the top row of the array.
+        //setting the orbit flag for the top row of the array.
+          for(i = 0; i <= yval; i++)
+        {
+            tempcac = new Clockarry();
+            tempcac.retwash(fivebyfive[0][0]);
+            tempcac.setOrbitflag('R');
+     //         fivebyfive[0][i].setOrbitflag('Y');
+            fivebyfive[0][0] = tempcac;
+        }
+          return fullclockarry[xval][yval] 
+}
+Save  off the top row. Check for dupes.
+        Integer [] checkdupes = new Integer[5];
+        Integer [] checkdupes2 = new Integer[5];
+        Integer [] checkdupes3 = new Integer[5];
+        //added file
+        ArrayList<Clockarry> clocklist = new ArrayList<Clockarry>();
+        ArrayList<Integer[]> bucket = new ArrayList<Integer[]>();
+        for(i = 0; i < 5; i++ )
+        {
+          tempi = fivebyfive[0][i].getCvId();
+          itempi = Integer.parseInt(tempi);
+          checkdupes[i] = itempi;
+          checkdupes2[i] = itempi;
+        }
+        Arrays.sort(checkdupes);
+        //read from the second position to the right.
+        //if any cell is equal to the previous cell, there is a duplicate.
+        char flipadup = 'n';
+        for(i = 1; i < 5; i++ )
+        {
+         if(checkdupes[i] == checkdupes[i-1])
+         {
+             System.out.println("duplicate duplicate ");
+             flipadup = 'y';
+         }
+        }
 
-What is the overview? 
-build the 52 object input. 
-build a description to display 
-of what the program is doy
+Build a hash.
+ 
+public String returnhash(clockarray[][] fullclockarray)
+{
+int clocklength = fullclockarray[0].length();
+clockarry[] toprow = new clockarry[5];
+clockarry temporary_object = new clockarry;
+String gotindex, bucket;
+for(int i = 0; i < clocklength; i++) {
+gotindex = temporary_object[0][i].getindex();
+bucket = bucket + gotindex;
+}
+if(isthereadupe = 'N')
+//turn an array into a string.
+Arrays.toString(strArray)
+}
+ 
+Write the hash to the permanent array, all things being ok.
+private HashMap<String, clockarry> finalmap = new HashMap<String, clockarry>();
+    public void puttable3map(String idKey, clockarry clockformap)
+    {
+        finalmap.put(idKey, clockformap);
+    }
+The entire process is a loop. The loop starts at the far right, and moves to the left.
+Location is defined as a place on the table. Pos is defined here as one of the five random pulls.
+Move the clockup, one position.
+sub. get the next pos.
+1       . if out of positions 
+2       . if next pos = flag and >= max        3      . if next pos = flag and < max.
+4       . if next pos <= max, and no flag
+5       . if next pos > max, and no flag
+ 
+if out of positions, the function is complete. begin to process the arrays against the built in patterns.
+If pos is not at max,, the pos is increased by 1, and then the program moves one column to the left. The program doesn't do anything after moving one pos to the left. It just wait until the loop comes around again.
+max. pos set to one. move to new column, which is column = column minus one. Pos of new column. in example 2 1 3 5 4, and the 4 is new.
+The loop is done when the left is reached.
+A column is done when position equals location in the first time through, or position is greater than Max in subsequent times through.  Whether the Pos is max or not doesn't matter.
+If max is reached, the Pos is set to 1.  Even if max was 1 to begin with. 
+Even if the Pos was at 1 before the object was measured.
+Clock recreation function.
+The new row in a new clockarray is built off the top row of the existing clockarray.
+After the temporary row is created from the existing row, the new columns are built in a new clockarray. The newly built columns are built off the new row, not the old clockarray.
+three large functions. first function loops from Max to 1. and creates a temporary top row. second row builds the positions from the newly created top row in the new clockarray. The third function populates the clockarry with objects. 
+for(int i = limit; i > 0; i--;) {
+act, is defined as what object to load into a pos
+if(  i == limit  ) { 
+goto the righrmost column, read. act.
+}
+if( i < max and > 0   ) { 
+read. act.
+}
+at i equal 0, the function automatically exits the loop.
+flag
+if(  object.flagindicator == flag  ) { 
+//doesn't matter if pos is Max or pos less than Max
+pos = 1
+}
+no flag and max.
+if(   flagindicator == 'N'  And pos = Max) { 
+pos = 1
+}
+cleaner to use the logic like a real clock and not try to figure everything out independently.
+no flag, not max.
+if(   flagindicator == 'N'  And pos < Max) { 
+pos = pos ++
+}
+}
+for(int x = max; x > 0; x--;) {
+    for(int y = 2; y <= max; y++) {
+     move from one column to the next within
+     the top row. build the column from the
+      temporary top row.
+         pull previous pos.
+         do calculation.
+         pull pos object  from 5 objects
+          pop new location.
+     }
+  }
+##########
+first row has a key made. Put the key in  a variable. run a compare each time a row is created.
+The program is complete when the key is complete.
+When a  clock reaches max, it goes to one. If something is at the max, a subloop kicks off.  the sub loop moves from right to left.
 
-build the five tables. 
-buid the five patterns. 
-build the clock. 
-build the five character array used to create the first row of the clock. 
+Hi level description of what happens. in order.
+Note: There is no looping, not at the high level. An array is input, and an altered  (possibly through a loop) array is output.
+1. initialize the first clock array, and the following temporary clockarray.
+2. Retrieve and load the random values into a single dim array.
+3. build the clock array from the single dim array. 
+3b. calculate and load both the positions and the location for each object. At this point the position and locations are both be the same. 
+Note: the positions are ephemeral and change as the clock moves. The location, once set, normally doesn't change
+4. create a hash of the top row key, and put it in a variable. This will work as the flag setting algorithm was supposed to work.
+5. the temporary clock array is built from the original clock array.
+6. the temporary clock array is loaded from the temporary one dim array. the position from the temporary array is used as a key, which is used to load in the temporary clock array with the objects.
+7. the top row of the temporary clock array is processed, at first by creating a key of the top row. Duplicates are not looked for at this point. 
+7b.  the first time through use the key from the top row and put it in a variable. checking this variable will do it looking 
+for a key was supposed to do.
+7c. when the temporary clock is first built,  the position and location  match. when the position and the location  match again, the column would have gone through one cycle. and it's time to go to the next column.
+8a. check for  end of columns. done at first by seeing if position matches location.  Then by seeing position greater than max.
+8b. check for duplicate cells in the row. sort the cells in a row. If any cell matches the previous cell, there is a duplicate.
+8c. if there are duplicates in a temporary row, this next step is ignored. if there are no duplicates in this row,  a hash is created from this temporary row. the hash is compared to the hash in the permanent row. 
+8d. The object is originally pulled randomly and placed into a 1 dim hash with a key whose XX component is zeroes. 
+The object gets passed from  current column to new column by first figuring out what the ephemeral
+position is.  Then pulling the permanent location into the new position. Where does the permanent location come from?  
+There is the old object, and the new object.  The new object has to be determined. And is not known yet. 
+ 
+Note: Need to differentiate between what is looked at, what is advanced.  what role the pull number plays.  And what is turned into a hash.  
+position is ephemeral.  location is permanent. the value of what get pulled it goes without saying has nothing to do with anything.
+The pull number equates  sequence. Sequence =  permanent Y  location. 
+Formation and translation of keys.  There is a variable and a keyed hasharray that guide the clockarrays in their construction, and their use. The variable is a variable that contains a hash of the xy values of the first row to be run. When a future xy row value match the variable of the first xy value, it is assumed that the circle is complete, and that a piece of the program has been run. 
+- the flag uses loc x and y for flag position. 
+- x and y are combined to create a hash for a row.Succeeding hashes are 
+   compared to the first hash to check for end of the program.
+- pos / loc use. loc is permanent. pos is temp. 
+- loc answers questions about the sequence the objects were pulled in. pos is 
+   temporary and answers questions about sequences that are possible.
+- a number in the index represents the default value. 
+- the last hash value is the current hash value. The hashmap records may have to be 
+   numbered to do this. 
+- the default value always comes first. Anything else is an override. 
+- the objects at a particular location is the value of the compete object. And not a 
+   partial value. 
+- The key is 12 characters. Right/left up/down, 4 for pos, 4 loc, and 4 index.
+- When pos, loc or index is zero, Means 'any'. 
+- hasharray identifies the last row to be processed, this is the standin for the flagging. 
+- moving from object to object. New pos calcultd from old pos. 
+- new location copied  from old location. The rest of the vals are filled first from the 
+   default in the hashmap, then other values in the hashmap, using the loc as a hash.  
+- dealing with duplicates. The first value might, in some other circumstance, be a dupe. 
+   It is therefore ok to build the flag variable from a row without checking for dups.
+   Because a duplicate might be the first variable.  
 
-
-
-
- clockarray toprow = new clockarray();
-        clockarrayclass[][] trow = new clockarrayclass[1][5]; 
-        trow =  toprow.initclockarray(1,5);
-        
-        //-copy pulls into top row array. 
-        //-fill in location an other pieces of top row array. 
-        //-fill in each column, based on the top row, which is the top of each column
-        //-the positions of the clock objects in the clockarray don't change,
-        //-what the clockobjects in the clockarray represents is what changes. 
-        //-A function decides which clock object is to be populated. 
-        //-the new clock cell is populated with the new values
-        //-There are five possible pulls. A function chooses which of the five it will be, for each new clock object
-        
-        
-        
-        /*7/30
-        notes. pull objects one thru five. 
-        Array isn't keyed. 
-        Y variable acts as an index. 
-        X variable is filled witha  zero, and the resulting object is copied to to the clock. 
-        But first, a series of functions. 
-        - function to initialize the approx 5 x 5 objects. 
-        - function that numbers the 5 x 5 objects are dealt with, one vertical row at a time, starting with the rightmost
-          column.  The function counts up to five. When it gets to five. It starts overs. 
-        - ends up with what looks like a table of 25 values. 5 by 5. No classes, just the Y values to be 
-          filled in later. 
-        - From right to left. works like a clock. Function moves each number from top to bottom, until it gets to the 
-          last number. 
-        - Function flags all the objects in the top row. In this case, its five opjects. When the 
-          the program circles back around to all five objects in the top row, the program is done. 
-        - Function checks for duplicates. First from right to left. All five objects are written to a 
-          separate array with a flag set to 'N' After a column is changed, all the objects in the clock
-          are checked against the array. The flags in the array are changed with each complete change of the 
-          clock. When a number is found in the top array of the clock, the array equivalent is set to 'Y'. 
-          If the array is already a 'Y', its a duplicate. 
-        - Function checks for duplicates. Second. Each row becomes a number, which are then sorted, and
-          duplicates are eliminated.  Use String_toint or hopefully some equivalent.
-        Note: This whole time, the object index numbers (the Y value) is filled out, and nothing else. Nothing else will 
-        be filled out until the horizontal array is finally written out. 
-          
-           
-
-         /*  111919
-	 Clockarry[][] template_ fivebyfive =   bpca.init_a_twodim_arry(5, 5)
-	 template_fivebyfive = bpca.rowload(template_fivebyfive, asinglepull, 5, 5, 0);    
-      */	
-
-	populating the other clockarray
-              fivebyfive[j][i] = tempcac;
-               /*  111919
-	 template_ fivebyfive[j][i] =  tempcac; 
-              */	
- 	 
-     /*  111919   after the loop populating both the fivebyfive and its clone.  
-String getdesA = fivebyfive[0][2].getCvDescription();
-String getdesB = template_fivebyfive[0][2].getCvDescription();
-System.out.println(" should be the same  " +  getdesA + " " + getdesB + "  ");   
-getdesA = fivebyfive[0][2].setCvDescription();
-getdesA = fivebyfive[0][2].getCvDescription();
-getdesB = template_fivebyfive[0][2].getCvDescription();
-System.out.println(" should be different  " +  getdesA + " " + getdesB + "  ");   
-   */
-
-        
-        
-        
-        
-        
+9. if the row does not exist in the permanent array this function inserts the row into the permanent array.
+10. if all is successful, the temporary array becomes the permanent array, and the temporary array itself is reinitialized.
+11. the top row of the temporary array is rebuilt. the rebuilding includes checking for limits, and position versus location,  
+and processing accordingly.
+12. the balance of the temporary clock  is rebuilt in accordance with the top row of the temporary top array.
+14. the permanent array should have all the objects in every order. each of these rows is checked against the predefined patterns.
+       
         */
-        
-        
-        
+   
+Location Addition/repalacement function from object
+Location Addition/repalacement function from array
+Index Creation Function from object
+Index retrieval function from object
+Index Creation Function from object hashmap
+Index retrieval function from object hasmap
+Row hashmap creation function 
+Row hashmap addition function 
+Row hashmap retrieval function
+Object hashmap creation function 
+Object  hashmap addition function
+Object  hashmap retrieval function
+Flag variable creation function
+Flag variable comparison  func tion
+Position creation function
+Position addition function 
+Position retrieval function
+Location creation function
+Location addition function
+Location retrieval function
+End of column detection function
+Top row pull from array function
+Advance the top row function
+Build out columns function
+Populate columns with defaults function.
+Replace defaults with specialties from hashmap function
+final hash creation function
+final hash add to function
+Final hash lookup/retreive function
+Position/Location Match in temp array function
+Temp object update function
+Temp object create function
+Temp object lookup function
+Permanent object update function
+Permanent object create function
+Permanent object lookup function
+Temp array update function
+Temp array lookup function
+Temp array creation function
+Permanent array update function
+Permanent array lookup function
+*/
+
+
+
+

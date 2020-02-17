@@ -599,6 +599,66 @@ Temp array lookup function
 Temp array creation function
 Permanent array update function
 Permanent array lookup function
+
+
+
+
+
+
+//Object hashmap creation 
+public HashMap<int, Clockarry> clockarry_objects = new HashMap<int, Clockarry>();
+
+
+//Object hashmap addition function
+public static void add_to_object_hashmap(int hashindex, Clockarry clockobject)
+{
+ 	clockobject.put(hashindex, clockobject);
+}
+
+
+//Index retrieval function from object hasmap
+public static Clockarry retrieve_object_from_hashmap(int hashindex, Clockarryclockarry_objects)
+{
+	Clockarry anobject = new Clockarry;
+ 	anobject =  clockarry_objects.get(hashindex);
+	return anobject;
+}
+
+//Row hashmap creation function
+private HashMap<String, Clockarry> single_row_map = new HashMap<String, singlerow_clockarry>();
+
+
+//Row hashmap addition function 
+public static void add_to_row_hashmap(int hashindex, Clockarry[] clockrow)
+{
+      single_row_map.put(hashindex, clockrow[]);
+}
+
+//Row hashmap retrieval function
+public static Clockarry[] retrieve_row_from_hashmap(int hashindex, Clockarry[] clockarry_row)
+{
+	Clockarry[] arow = new Clockarry[];
+ 	arow =  clockarry_row.get(hashindex);
+	return arow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
 
 

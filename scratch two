@@ -1,0 +1,144 @@
+
+//Object hashmap creation 
+public HashMap<int, Clockarry> clockarry_objects = new HashMap<int, Clockarry>();
+
+
+//Object hashmap addition function
+public static void add_to_object_hashmap(int hashindex, Clockarry clockobject)
+{
+ 	clockobject.put(hashindex, clockobject);
+}
+
+
+//Index retrieval function from object hasmap
+public static Clockarry retrieve_object_from_hashmap(int hashindex, Clockarryclockarry_objects)
+{
+	Clockarry anobject = new Clockarry;
+ 	anobject =  clockarry_objects.get(hashindex);
+	return anobject;
+}
+
+//Row hashmap creation function
+private HashMap<String, Clockarry> single_row_map = new HashMap<String, singlerow_clockarry>();
+
+
+//Row hashmap addition function 
+public static void add_to_row_hashmap(int hashindex, Clockarry[] clockrow)
+{
+      single_row_map.put(hashindex, clockrow[]);
+}
+
+//Row hashmap retrieval function
+public static Clockarry[] retrieve_row_from_hashmap(int hashindex, Clockarry[] clockarry_row)
+{
+	Clockarry[] arow = new Clockarry[];
+ 	arow =  clockarry_row.get(hashindex);
+	return arow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Location Addition/repalacement function from array
+Index Creation Function from object
+Index retrieval function from object
+Index Creation Function from object hashmap
+Index retrieval function from object hasmap
+Row hashmap creation function 
+Row hashmap addition function 
+Row hashmap retrieval function
+Object hashmap creation function 
+Object  hashmap addition function
+Object  hashmap retrieval function
+Flag variable creation function
+Flag variable comparison  func tion
+Position creation function
+Position addition function 
+Position retrieval function
+Location creation function
+Location addition function
+Location retrieval function
+End of column detection function
+Top row pull from array function
+Advance the top row function
+Build out columns function
+Populate columns with defaults function.
+Replace defaults with specialties from hashmap function
+final hash creation function
+final hash add to function
+Final hash lookup/retreive function
+Position/Location Match in temp array function
+Temp object update function
+Temp object create function
+Temp object lookup function
+Permanent object update function
+Permanent object create function
+Permanent object lookup function
+Temp array update function
+Temp array lookup function
+Temp array creation function
+Permanent array update function
+Permanent array lookup function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this version, the objects live as classes. 
+In future versions, the objects do not live as classes, but 
+as records in a database.  The record cells are object (ie car or card),  attribute name, 
+type(ie. string char, or int), and value. 
+The keys are numbers. The numbers are attached to the cell names.  Using numbers
+as keys allows the attributes to be referenced no matter what object they belong to, 
+and to eliminate the need for special coding for each attribute. 
+The maths and get and put will also be put into a database, and reference a specific set of 
+code. So if two things have to be added, subtracted or concatenated or turned into an integer
+from a string, there will be a template of simple actions an object attribute can refer to. 
+This will eliminate the need for special coding for individual attributes. A number or numbers  in the record
+will refer to a default template of processes, of which the record will chose one or more. The results will
+be returned as a string to the record. 
+
+
+
+
+
+
+
+

@@ -1,3 +1,75 @@
+Flag variable creation function
+tracks starting point for clocking function. 
+works for the row.  its locX and locY from right to left. 
+read as a string. cocat.
+where necessary, can be converted to  int via Integer.parseInt(some_string);  
+loc/pos stored as strings  since leading zeroes get lopped off. 
+
+public static Integer create_flag_variable(Clockarry[][] ca, max)
+{
+    int int_retrieve = 0;  
+    String fromint = "";
+    String concat_string;
+
+    for(int i = max;  i => 0; i--) 
+{
+    int_retrieve = ca[0][i].getLocX();
+    fromint = String.format(%02d, int_retrieve )
+    concat_string = fromint + concat_string  	  
+    }	
+}
+
+//this has to be a string/string compare, because of the leading zeros. 
+Flag variable comparison  function
+public static char flag_variable_compare(String created_hash, String compare_variable)
+{
+if( created_hash = compare_variable){
+return 'Y';
+}
+return 'N';
+}
+
+//Note: X describes movements from left to right. Which column. Y descrives movements up 
+//and down. Which row 
+//includes math. Excludes flag match. Excludes position v location match used to turn cyclinder
+Position creation function. returns an object loaded with the new position. 
+public static position_creation(Classarry newpos_object, int prevposx, int prevposy, 
+private HashMap<String, Clockarry> unique_object_map, Clockarry[][] temporary_clockarry )
+{
+int xpos = temporary_clockarray[preposx][preposy].getXpos();
+int ypos = temporary_clockarray[preposx][preposy].getYpos();
+} 
+
+
+
+Position addition function 
+Position retrieval function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Object hashmap creation 
 public HashMap<int, Clockarry> clockarry_objects = new HashMap<int, Clockarry>();

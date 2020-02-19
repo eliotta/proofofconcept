@@ -1,7 +1,5 @@
 
 
-
-
 retrieval current Xloc Yloc
 public static String retrvl_curr_xyloc_tmp_clock(int currX, int currY, Clockarry[][] temporary_clockarry)
 {
@@ -14,6 +12,31 @@ fromy = String.format(%02d, ypos )
 String concatxy = fromx + fromy;
 return concatxy;
 }
+
+Objectarray Retrieval Obj_hashmap
+public static Clockarry Objectarray Retrieval Obj_hashmap(Clockarry clock, HashMap<String, Clockarry> specificobjects, String concatxy )
+{
+clock = secficobjects.get(concatxy);
+return clock;
+} 
+
+
+object posx retrieval function
+public static Integer retrieve_pos_from_object_posx(Classarry inforpos)
+{
+int posx = inforpos.getposX();
+return posx;
+}
+
+
+object posy retrieval function
+public static Integer retrieve_pos_from_object_posy(Classarry inforpos)
+{
+int posx = inforpos.getposY();
+return posY;
+}
+
+
 
 
 

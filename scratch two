@@ -1,5 +1,4 @@
 
-
 retrieval current Xloc Yloc
 public static String retrvl_curr_xyloc_tmp_clock(int currX, int currY, Clockarry[][] temporary_clockarry)
 {
@@ -28,13 +27,35 @@ int posx = inforpos.getposX();
 return posx;
 }
 
-
 object posy retrieval function
 public static Integer retrieve_pos_from_object_posy(Classarry inforpos)
 {
 int posx = inforpos.getposY();
 return posY;
 }
+
+/
+object locx retrieval function
+public static Integer retrieve_loc_from_object_locx(Classarry inforpos)
+{
+int locx = inforpos.getlocX();
+return locx;
+}
+
+object locy retrieval function
+public static Integer retrieve_loc_from_object_locy(Classarry inforpos)
+{
+int locx = inforpos.getlocY();
+return locY;
+}
+
+Loc Match Pos
+public static String Loc_Match_Pos(Integer PosX, Integer Posy, Integer LocX, Integer LocY )
+{
+ 
+}
+
+
 
 
 

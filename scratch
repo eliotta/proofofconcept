@@ -599,6 +599,13 @@ Temp array lookup function
 Temp array creation function
 Permanent array update function
 Permanent array lookup function
+retrieval current Xloc 
+retrieval current Yloc
+Loc Object Hash Creation.
+Objectarray Retrieval Obj_hashmap
+Loc_Match_Pos
+Change_Because_Loc_Match_Pos
+Loopthru_Toprow_Till_Loppos_Dontmatch
 
 
 

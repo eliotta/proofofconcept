@@ -1,3 +1,38 @@
+
+
+
+
+retrieval current Xloc Yloc
+public static String retrvl_curr_xyloc_tmp_clock(int currX, int currY, Clockarry[][] temporary_clockarry)
+{
+String fromx;
+String fromy;
+int xpos = temporary_clockarray[currX][currY].getXpos();
+int ypos = temporary_clockarray[currX][currY].getYpos();
+fromx = String.format(%02d, xpos )
+fromy = String.format(%02d, ypos )
+String concatxy = fromx + fromy;
+return concatxy;
+}
+
+
+
+
+retrieval current Yloc/Xloc
+Loc Object Hash Creation.
+Objectarray Retrieval Obj_hashmap
+Loc_Match_Pos
+Change_Because_Loc_Match_Pos
+Loopthru_Toprow_Till_Loppos_Dontmatch
+Position addition function 
+Position retrieval function
+
+
+
+
+
+
+
 Flag variable creation function
 tracks starting point for clocking function. 
 works for the row.  its locX and locY from right to left. 

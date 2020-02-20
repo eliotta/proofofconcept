@@ -1,4 +1,76 @@
 
+
+Loc Match Pos
+public static String Loc_Match_Pos(Integer PosX, Integer Posy, Integer LocX, Integer LocY )
+{
+String from_locx = String.format(%02d, xloc )
+String from_locy = String.format(%02d, yloc )
+String concat_locxy = from_locx + from_locy;
+
+String from_posx = String.format(%02d, xpos )
+String from_posy = String.format(%02d, ypos )
+String concat_posxy = from_posx + from_posy;
+
+if(concat_posxy == concat_locxy)
+{
+ return "Y"; 
+}
+
+Return "N";
+}
+
+Change Because Loc Match Pos
+public static Clockarry[]  Change_Because_Loc_Match_Pos(int maxx, Clockarry[][] twodimCA, Clockarry[] asinglerow)
+{
+      for(int i = maxx, i >= 0;  i--)
+      {
+         twodimCA[0][i] = asinglerow[i];                                                                                                   	 	
+       }    
+
+      return 	twodimCA;
+}
+
+
+
+Loopthru Toprow Till Loppos Dontmatch
+Loopthru_Toprow_Till_Loppos_Dontmatch( Clockarry[] asinglerow)
+{
+       int maxx = Clockarry.length().      
+       int PosX = 0;
+       int LocX= 0;           
+      for(int i = maxx, i >= 0;  i--)
+      {
+        LocX = asinglerow[i].getLocX();
+        PosX  = asinglerow[i].getPosX();	
+        if(PosX == LocX)
+        {
+           i = 0;
+        }                                                                       	 	
+       }    
+       return LocX;                       
+}
+
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 retrieval current Xloc Yloc
 public static String retrvl_curr_xyloc_tmp_clock(int currX, int currY, Clockarry[][] temporary_clockarry)
 {

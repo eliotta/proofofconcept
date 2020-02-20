@@ -41,7 +41,7 @@ public  Clockarry added_one_clockarry(int inputx, int inputy,
  for(int y = 0; y < max; y++ ) {
  int cellindex = inClock.getIndex(x,y);
  cellindex++
- if(cellindex  >= max)
+ if(cellindex  >= max) 
       cellindex = 1 ;
 //populate the single array that represents the top row.
  temca[y] = inClock[x][cellindex]

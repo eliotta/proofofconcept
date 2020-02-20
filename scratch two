@@ -1,5 +1,5 @@
 
-
+//
 Loc Match Pos
 public static String Loc_Match_Pos(Integer PosX, Integer Posy, Integer LocX, Integer LocY )
 {
@@ -49,6 +49,23 @@ Loopthru_Toprow_Till_Loppos_Dontmatch( Clockarry[] asinglerow)
        }    
        return LocX;                       
 }
+
+
+Position addition function 
+public static Clockarry  pos_add_to_object(int PosX, Clockarry CA)
+{
+    CA.setPosX(PosX);
+}
+
+Position retrieval function
+public static Clockarry  pos_retrieve_object(int PosX, Clockarry CA)
+{
+    CA.getPosX();
+    return CA;
+}
+
+
+
 
 
 
